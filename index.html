@@ -19,31 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&display=swap" rel="stylesheet">
 
 </head>
-<!-- SECRET RPG DIALOG (hidden until triggered) -->
-<div id="rpgEgg" class="rpg-egg" aria-hidden="true">
-  <div class="rpg-backdrop"></div>
 
-  <div class="rpg-box" role="dialog" aria-label="Secret message">
-    <div class="rpg-top">
-      <div class="rpg-title">Echelon Secret</div>
-      <button id="rpgClose" class="rpg-close" aria-label="Close">×</button>
-    </div>
-
-    <div id="rpgText" class="rpg-text"></div>
-
-    <div class="rpg-bottom">
-      <div class="rpg-hint">
-        Press <span class="rpg-key">E</span> or tap <span class="rpg-key">Next</span>
-      </div>
-
-      <button id="rpgNext" class="rpg-next" type="button">
-        Next <span class="rpg-arrow">▶</span>
-      </button>
-
-      <span class="rpg-caret" aria-hidden="true">▮</span>
-    </div>
-  </div>
-</div>
 
 <body class="bg-black text-white overflow-x-hidden">
 
@@ -423,7 +399,31 @@
 </section>
 
 
+<!-- SECRET RPG DIALOG (hidden until triggered) -->
+<div id="rpgEgg" class="rpg-egg" aria-hidden="true">
+  <div class="rpg-backdrop"></div>
 
+  <div class="rpg-box" role="dialog" aria-label="Secret message">
+    <div class="rpg-top">
+      <div class="rpg-title">Echelon Secret</div>
+      <button id="rpgClose" class="rpg-close" aria-label="Close">×</button>
+    </div>
+
+    <div id="rpgText" class="rpg-text"></div>
+
+    <div class="rpg-bottom">
+      <div class="rpg-hint">
+        Press <span class="rpg-key">E</span> or tap <span class="rpg-key">Next</span>
+      </div>
+
+      <button id="rpgNext" class="rpg-next" type="button">
+        Next <span class="rpg-arrow">▶</span>
+      </button>
+
+      <span class="rpg-caret" aria-hidden="true">▮</span>
+    </div>
+  </div>
+</div>
 
 
 
@@ -1007,6 +1007,39 @@ I only speak after the fifth one....
       video.pause();
     }, 2800);
   }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".mobile-menu-btn");
+  const menu = document.getElementById("mobileMenu");
+  const closeBtn = document.querySelector(".mobile-close");
+  const backdrop = document.querySelector(".mobile-menu-backdrop");
+
+  if (!btn || !menu) return;
+
+  const openMenu = () => {
+    menu.classList.add("open");
+    btn.setAttribute("aria-expanded", "true");
+    menu.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeMenu = () => {
+    menu.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+    menu.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+
+  btn.addEventListener("click", openMenu);
+  closeBtn?.addEventListener("click", closeMenu);
+  backdrop?.addEventListener("click", closeMenu);
+
+  // ESC close
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+});
 </script>
 
   <!-- JS -->
