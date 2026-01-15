@@ -1204,6 +1204,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const openMenu = () => {
     menu.classList.add("open");
+    btn.classList.add("is-open");              // (optional) animate burger if you want
     btn.setAttribute("aria-expanded", "true");
     menu.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -1211,21 +1212,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const closeMenu = () => {
     menu.classList.remove("open");
+    btn.classList.remove("is-open");
     btn.setAttribute("aria-expanded", "false");
     menu.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
   };
 
-  btn.addEventListener("click", openMenu);
+  // ✅ Toggle (open/close)
+  btn.addEventListener("click", () => {
+    menu.classList.contains("open") ? closeMenu() : openMenu();
+  });
+
+  // ✅ Close button + backdrop
   closeBtn?.addEventListener("click", closeMenu);
   backdrop?.addEventListener("click", closeMenu);
 
-  // ESC close
+  // ✅ Close when any menu link is clicked
+  menu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
+
+  // ✅ ESC closes
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeMenu();
   });
 });
 </script>
+
 
   <!-- JS -->
   <script src="script.js"></script>

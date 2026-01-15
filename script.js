@@ -137,3 +137,50 @@ logo.addEventListener("mouseleave", () => {
     }
   });
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".mobile-menu-btn");
+  const menu = document.getElementById("mobileMenu");
+  const closeBtn = document.querySelector(".mobile-close");
+  const backdrop = document.querySelector(".mobile-menu-backdrop");
+
+  if (!btn || !menu) return;
+
+  const openMenu = () => {
+    menu.classList.add("open");
+    btn.classList.add("is-open");              // (optional) animate burger if you want
+    btn.setAttribute("aria-expanded", "true");
+    menu.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeMenu = () => {
+    menu.classList.remove("open");
+    btn.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+    menu.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+
+  // ✅ Toggle (open/close)
+  btn.addEventListener("click", () => {
+    menu.classList.contains("open") ? closeMenu() : openMenu();
+  });
+
+  // ✅ Close button + backdrop
+  closeBtn?.addEventListener("click", closeMenu);
+  backdrop?.addEventListener("click", closeMenu);
+
+  // ✅ Close when any menu link is clicked
+  menu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
+
+  // ✅ ESC closes
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+});
+
