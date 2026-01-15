@@ -1931,3 +1931,218 @@ header::before{
   max-width: 640px;
   text-align: center;
 }
+/* ===== Bigger Easter Egg ===== */
+.egg-hint{
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;              /* more breathing room */
+  margin-left: 12px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.egg-btn{
+  background: transparent;
+  border: none;
+  padding: 10px;          /* bigger hit area */
+  cursor: pointer;
+  line-height: 0;
+  opacity: 0.8;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.egg-btn:hover{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.egg-img{
+  width: 76px;            /* 🔥 BIGGER */
+  height: 76px;
+  display: block;
+  object-fit: contain;
+  opacity: 0.92;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    filter 180ms ease;
+}
+
+.egg-btn:hover .egg-img{
+  opacity: 1;
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 0 14px rgba(255,255,255,0.38));
+}
+/* ===== Bigger Easter Egg ===== */
+.egg-hint{
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;              /* more breathing room */
+  margin-left: 12px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.egg-btn{
+  background: transparent;
+  border: none;
+  padding: 10px;          /* bigger hit area */
+  cursor: pointer;
+  line-height: 0;
+  opacity: 0.8;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.egg-btn:hover{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.egg-img{
+  width: 76px;            /* 🔥 BIGGER */
+  height: 76px;
+  display: block;
+  object-fit: contain;
+  opacity: 0.92;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    filter 180ms ease;
+}
+
+.egg-btn:hover .egg-img{
+  opacity: 1;
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 0 14px rgba(255,255,255,0.38));
+}
+/* ===== Bigger Easter Egg ===== */
+.egg-hint{
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;              /* more breathing room */
+  margin-left: 12px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.egg-btn{
+  background: transparent;
+  border: none;
+  padding: 10px;          /* bigger hit area */
+  cursor: pointer;
+  line-height: 0;
+  opacity: 0.8;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.egg-btn:hover{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.egg-img{
+  width: 76px;            /* 🔥 BIGGER */
+  height: 76px;
+  display: block;
+  object-fit: contain;
+  opacity: 0.92;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    filter 180ms ease;
+}
+
+.egg-btn:hover .egg-img{
+  opacity: 1;
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 0 14px rgba(255,255,255,0.38));
+}
+/* ===== Bigger Easter Egg ===== */
+.egg-hint{
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;              /* more breathing room */
+  margin-left: 12px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.egg-btn{
+  background: transparent;
+  border: none;
+  padding: 10px;          /* bigger hit area */
+  cursor: pointer;
+  line-height: 0;
+  opacity: 0.8;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.egg-btn:hover{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.egg-img{
+  width: 76px;            /* 🔥 BIGGER */
+  height: 76px;
+  display: block;
+  object-fit: contain;
+  opacity: 0.92;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    filter 180ms ease;
+}
+
+.egg-btn:hover .egg-img{
+  opacity: 1;
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 0 14px rgba(255,255,255,0.38));
+}
+/* ===== Bigger Easter Egg ===== */
+.egg-hint{
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;              /* more breathing room */
+  margin-left: 12px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.egg-btn{
+  background: transparent;
+  border: none;
+  padding: 10px;          /* bigger hit area */
+  cursor: pointer;
+  line-height: 0;
+  opacity: 0.8;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.egg-btn:hover{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.egg-img{
+  width: 76px;            /* 🔥 BIGGER */
+  height: 76px;
+  display: block;
+  object-fit: contain;
+  opacity: 0.92;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    filter 180ms ease;
+}
+
+.egg-btn:hover .egg-img{
+  opacity: 1;
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 0 14px rgba(255,255,255,0.38));
+}
+/* FORCE OVERRIDE - put at bottom */
+.egg-btn .egg-img{
+  width: 90px !important;
+  height: 90px !important;
+}
