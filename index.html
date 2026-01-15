@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Echelon Websites</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+  <!-- BACKGROUND VIDEO -->
+  <div class="video-wrapper">
+    <video autoplay muted loop playsinline class="bg-video">
+      <!-- replace with your loop -->
+      <source src="assets/video3.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay-dark"></div>
+    <div class="overlay-gradient"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="relative z-20">
+  <!-- REPLACE your <nav ...> ... </nav> with this (same desktop, clean mobile) -->
+<nav class="nav-shell max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+  <!-- Left: Logo (desktop) -->
+  <a href="#" class="brand-left hidden md:flex items-center gap-3 group">
+    <img
+      src="assets/logo.png"
+      alt="Echelon Websites"
+      class="h-9 w-auto opacity-90 group-hover:opacity-100 transition"
+    />
+    <div class="leading-tight">
+      <span class="block text-[11px] tracking-[0.35em] uppercase text-white/80">Echelon</span>
+      <span class="block text-[10px] tracking-[0.45em] uppercase text-white/40">Websites</span>
+    </div>
+  </a>
+
+  <!-- Mobile: Menu button (left) -->
+  <button
+    class="md:hidden mobile-menu-btn"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+    aria-controls="mobileMenu"
+  >
+    <span class="burger" aria-hidden="true"></span>
+  </button>
+
+  <!-- Mobile: Center logo -->
+  <a href="#" class="md:hidden brand-center">
+    <img src="assets/logo.png" alt="Echelon Websites" class="h-9 w-auto opacity-95" />
+  </a>
+
+  <!-- Desktop nav links -->
+  <div class="hidden md:flex items-center gap-10 text-[13px] tracking-[0.25em] uppercase text-white/60">
+    <a href="#portfolio" class="nav-link">Work</a>
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#process" class="nav-link">Process</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+
+  <!-- Desktop CTA -->
+  <a
+    href="contact.html"
+    class="hidden sm:flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 text-xs tracking-[0.25em] uppercase hover:bg-white/10 transition"
+  >
+    Start Project
+    <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
+  </a>
+
+  <!-- Mobile: right spacer (keeps center logo truly centered) -->
+  <div class="md:hidden mobile-right-spacer" aria-hidden="true"></div>
+</nav>
+
+<!-- MOBILE MENU PANEL (put right after nav) -->
+<div id="mobileMenu" class="mobile-menu md:hidden" aria-hidden="true">
+  
+  <!-- CLOSE BUTTON -->
+  <button class="mobile-close" aria-label="Close menu">
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="mobile-menu-backdrop"></div>
+
+  <div class="mobile-menu-inner">
+    <a href="#portfolio" class="mobile-link">Work</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#process" class="mobile-link">Process</a>
+    <a href="contact.html" class="mobile-link">Contact</a>
+
+    <a href="contact.html" class="mobile-cta">
+      Start Project <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
+    </a>
+  </div>
+</div>
+  </header>
+
+  <!-- HERO -->
+  <main class="relative z-10">
+ <section class="min-h-[88vh] flex items-center">
+  <div class="max-w-7xl mx-auto px-6 w-full">
+    <div class="flex justify-center">
+      <div class="max-w-3xl text-center">
+
+        <div class="fade delay-1 inline-flex items-center justify-center gap-3 px-4 py-2 mx-auto">
+          <span class="text-xs tracking-[0.3em] uppercase text-white/70">
+            Private Web Development
+          </span>
+        </div>
+
+        <h1 class="fade delay-2 mt-6 text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-semibold">
+          <span class="hero-orbitron">Custom Coded Websites</span> crafted at a higher <br class="hidden sm:block" />
+       <span class="text-accent">level</span>.
+        </h1>
+
+        <p class="fade delay-3 mt-6 mx-auto max-w-xl text-white/65 text-lg leading-relaxed">
+          We design and build cinematic, conversion-focused websites for brands
+          that care about detail, performance, and perception.
+        </p>
+
+        <div class="fade delay-4 mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#" class="btn-primary">
+            Book a Call
+            <i class="fa-solid fa-arrow-right-long text-[12px]"></i>
+          </a>
+
+          <a href="#work" class="btn-ghost">
+            View Work
+            <i class="fa-regular fa-circle-play"></i>
+          </a>
+        </div>
+
+        <!-- GLOWING IMAGE UNDER HERO -->
+        <div class="fade delay-5 mt-16 flex justify-center">
+          <div class="hero-glow-wrapper">
+            <img
+              src="assets/hero-square.png"
+              alt=""
+              class="hero-glow-image"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="ticker-wrap">
+  <div class="ticker-shell">
+    <p class="ticker-title">Services and tools </p>
+
+    <div class="ticker">
+      <div class="ticker-track">
+        <!-- SET 1 -->
+        <span class="pill">Custom Coded Websites</span>
+        <span class="pill">Custom Visual Design</span>
+        <span class="pill">Graphic Design and Branding</span>
+        <span class="pill">SEO Foundations</span>
+        <span class="pill">Monthly Maintenance</span>
+        <span class="pill">Domain and DNS Management</span>
+        <span class="pill">Custom Hosting Setup</span>
+        <span class="pill">Form Management</span>
+
+        <span class="stack">Tailwind CSS</span>
+        <span class="stack">React</span>
+        <span class="stack">GitHub Version Control</span>
+        <span class="stack">Performance Optimization</span>
+
+        <!-- SET 2 (duplicate for seamless loop) -->
+        <span class="pill">Custom Coded Websites</span>
+        <span class="pill">Custom Visual Design</span>
+        <span class="pill">Graphic Design and Branding</span>
+        <span class="pill">SEO Foundations</span>
+        <span class="pill">Monthly Maintenance</span>
+        <span class="pill">Domain and DNS Management</span>
+        <span class="pill">Custom Hosting Setup</span>
+        <span class="pill">Form Management</span>
+
+        <span class="stack">Tailwind CSS</span>
+        <span class="stack">React</span>
+        <span class="stack">GitHub Version Control</span>
+        <span class="stack">Performance Optimization</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- COLLAGE COMMAND SECTION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="platform-section relative z-10 py-24 sm:py-32 bg-black">  <div class="max-w-7xl mx-auto px-6">
+
+    <p class="fade delay-1 text-xs tracking-[0.35em] uppercase text-white/60">
+      The Echelon Platform
+    </p>
+
+    <h2 class="fade delay-2 mt-5 text-[42px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-semibold">
+      Whatever you envision,<br class="hidden sm:block" />
+      we bring it to life faster.
+    </h2>
+
+    <p class="fade delay-3 mt-6 max-w-3xl text-white/60 text-lg leading-relaxed">
+      From founders to established teams, we build premium web experiences with
+      clean design, confident storytelling, and performance that feels effortless.
+    </p>
+
+    <div class="fade delay-4 mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-regular fa-window-maximize"></i>
+        </div>
+        <h3 class="feature-title">Custom builds</h3>
+        <p class="feature-text">
+          Tailored layouts and components designed around your brand, not a template.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-regular fa-circle-check"></i>
+        </div>
+        <h3 class="feature-title">Review and polish</h3>
+        <p class="feature-text">
+          A clean feedback flow with revisions that refine the details and elevate the finish.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <h3 class="feature-title">Speed and performance</h3>
+        <p class="feature-text">
+          Fast loading pages, smooth motion, and strong foundations for search visibility.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-regular fa-paper-plane"></i>
+        </div>
+        <h3 class="feature-title">Launch ready delivery</h3>
+        <p class="feature-text">
+          Clean handoff, hosting guidance, and support so your site goes live with confidence.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- PROCESS (Framer-style centered + square card) -->
+<section id="process" class="relative z-10 py-24 sm:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Centered header -->
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-xs tracking-[0.35em] uppercase text-white/60">
+        Process
+      </p>
+
+      <h2 class="mt-5 text-[40px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-semibold">
+        A clean process that<br class="hidden sm:block" />
+        moves fast and is custom to you.
+      </h2>
+
+      <p class="mt-6 text-white/60 text-lg leading-relaxed">
+
+      </p>
+    </div>
+
+    <!-- Square card -->
+    <div class="mt-14 flex justify-center">
+      <div class="process-square">
+        <!-- Step -->
+        <div class="process-step">
+          <div class="process-num">01</div>
+          <div class="process-body">
+            <h3 class="process-title">Discovery</h3>
+            <p class="process-text">
+              We lock in goals, pages, vibe, and what “success” looks like.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-divider"></div>
+
+        <div class="process-step">
+          <div class="process-num">02</div>
+          <div class="process-body">
+            <h3 class="process-title">Design Direction</h3>
+            <p class="process-text">
+              Layout, typography, and visuals — we build a look that fits your level.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-divider"></div>
+
+        <div class="process-step">
+          <div class="process-num">03</div>
+          <div class="process-body">
+            <h3 class="process-title">Build</h3>
+            <p class="process-text">
+              Custom-coded sections, smooth motion, responsive polish, and performance.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-divider"></div>
+
+        <div class="process-step">
+          <div class="process-num">04</div>
+          <div class="process-body">
+            <h3 class="process-title">Launch + Support</h3>
+            <p class="process-text">
+              DNS + hosting setup, form testing, and clean handoff with optional maintenance.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA row -->
+        <div class="process-cta">
+          <a href="contact.html" class="process-btn">
+            Start a project <i class="fa-solid fa-arrow-right-long text-[12px]"></i>
+          </a>
+          <span class="process-note">Typical timeline: 7–21 days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section id="command" class="command-section relative z-10 py-24 sm:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="command-stage">
+      <!-- collage layer -->
+      <div class="command-collage" aria-hidden="true">
+        <img class="c-img c-1" src="assets/chill.png" alt="" />
+        <img class="c-img c-2" src="assets/SpecialtyCars.png" alt="" />
+        <img class="c-img c-3" src="assets/max.png" alt="" />
+        <img class="c-img c-4" src="assets/Elixir.png" alt="" />
+        <img class="c-img c-5" src="assets/anchor.png" alt="" />
+      </div>
+
+      <!-- centered "command bar" -->
+      <div class="command-card">
+        <div class="command-inner">
+          <h3 class="command-text">
+            From Entrepenuers to Enterprises<span class="command-caret">|</span>
+          </h3>
+
+          <a href="contact.html" class="command-btn">
+            Get started
+          </a>
+        </div>
+      </div>
+
+      <!-- soft fade edges (makes it feel premium) -->
+      <div class="command-edge" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section id="portfolio" class="portfolio-section bg-black relative z-10">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="portfolio-head">
+      <p class="kicker">Portfolio</p>
+
+      <p class="sub">
+        A focused selection of Custom Coded Websites. 
+      </p>
+    </div>
+
+    <!-- WORK LIST -->
+    <div class="work-list">
+
+      <a class="work-item work-reveal-lr" href="https://maximumautocaretx.com/">
+        <h3 class="work-heading">Maximumautocaretx.com</h3>
+        <div class="work-media">
+          <img src="assets/max.png" alt="CHILL Grapevine website" />
+          <div class="work-scrim"></div>
+        </div>
+      </a>
+
+      <a class="work-item work-reveal-lr" href="https://anchorofhopecounselingllc.com/">
+        <h3 class="work-heading">AnchorOfHopeCounseling.com</h3>
+        <div class="work-media">
+          <img src="assets/anchor.png" alt="Anchor of Hope Counseling website" />
+          <div class="work-scrim"></div>
+        </div>
+      </a>
+
+      <a class="work-item work-reveal-lr" href="https://elixiruptowndallas.com/">
+        <h3 class="work-heading">ElixirUptownDallas.com</h3>
+        <div class="work-media">
+          <img src="assets/Elixir.png" alt="Elixir Uptown website" />
+          <div class="work-scrim"></div>
+        </div>
+      </a>
+
+      <a class="work-item work-reveal-lr" href="https://www.specialtycarsofflorida.com/">
+        <h3 class="work-heading">SpecialtyCarsOfFlorida.com</h3>
+        <div class="work-media">
+          <img src="assets/SpecialtyCars.png" alt="Shane’s Garages website" />
+          <div class="work-scrim"></div>
+        </div>
+      </a>
+
+         <a class="work-item work-reveal-lr" href="https://mitnl.netlify.app/">
+        <h3 class="work-heading">Maybeinthenextlife.com</h3>
+        <div class="work-media">
+          <img src="assets/mitnl.png" alt="Shane’s Garages website" />
+          <div class="work-scrim"></div>
+        </div>
+      </a>
+
+          <a class="work-item work-reveal-lr" href="https://chillgrapevine.netlify.app/">
+        <h3 class="work-heading">ChillBardDFW.com</h3>
+        <div class="work-media">
+          <img src="assets/chill.png" alt="Shane’s Garages website" />
+          <div class="work-scrim"></div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <style>
+    /* SECTION */
+    .portfolio-section{
+      padding: 2rem 0;
+      position: relative;
+    }
+
+    .container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER */
+    .portfolio-head{
+      max-width: 720px;
+      margin: 0 auto 4.5rem;
+      text-align: center;
+    }
+
+    .kicker{
+      font-size: 12px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin: 0;
+    }
+
+    .title{
+      margin: 16px 0 0;
+      font-size: 48px;
+      line-height: 1.1;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.801);
+    }
+
+    .sub{
+      margin-top: 16px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* WORK LIST */
+    .work-list{
+      display: flex;
+      flex-direction: column;
+      gap: 6rem; /* controlled spacing */
+    }
+
+    .work-item{
+      display: block;
+      max-width: 980px;
+      margin: 0 auto;
+      text-decoration: none;
+    }
+
+    /* UNIFORM TITLE SIZE */
+    .work-heading{
+      margin: 0 0 18px;
+      font-size: 34px;          /* LOCKED SIZE */
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: rgba(255,255,255,0.95);
+    }
+
+    /* IMAGE */
+    .work-media{
+      position: relative;
+      height: 420px;           /* LOCKED HEIGHT */
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .work-media img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.92;
+      transform: scale(1.02);
+      transition: transform 700ms ease, opacity 400ms ease;
+      display: block;
+    }
+
+    .work-item:hover img{
+      transform: scale(1.01);
+      opacity: 1;
+    }
+
+    .work-scrim{
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.12)
+      );
+    }
+
+    /* LEFT → RIGHT REVEAL */
+    .work-reveal-lr{
+      opacity: 0;
+      transform: translateX(-24px);
+    }
+
+    .work-reveal-lr.in{
+      opacity: 1;
+      transform: translateX(0);
+      transition: 700ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .work-reveal-lr.in:nth-of-type(1){ transition-delay: 0ms; }
+    .work-reveal-lr.in:nth-of-type(2){ transition-delay: 120ms; }
+    .work-reveal-lr.in:nth-of-type(3){ transition-delay: 240ms; }
+    .work-reveal-lr.in:nth-of-type(4){ transition-delay: 360ms; }
+
+    @media (max-width: 768px){
+      .title{ font-size: 38px; }
+      .work-heading{ font-size: 28px; }
+      .work-media{ height: 300px; }
+      .work-list{ gap: 4.5rem; }
+    }
+  </style>
+
+  <script>
+    // Reveal once, left → right
+    (() => {
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.25 });
+
+      document.querySelectorAll(".work-reveal-lr")
+        .forEach(el => io.observe(el));
+    })();
+  </script>
+</section>
+
+
+<!-- REVIEWS -->
+<section id="reviews" class="relative z-10 bg-black py-24 sm:py-32 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-xs tracking-[0.35em] uppercase text-white/60">
+        Reviews
+      </p>
+      <h2 class="mt-5 text-[40px] sm:text-[56px] leading-[1.05] font-semibold">
+        Trusted by real businesses.
+      </h2>
+     
+    </div>
+
+    <!-- Review cards -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Review -->
+      <div class="review-card">
+        <p class="review-text">
+          Eliseo built our website and we couldn’t be happier with how it turned out.
+          The site looks clean, loads fast, and actually feels like it represents our business.
+          He was super easy to work with and genuinely cares about quality.
+        </p>
+
+        <div class="review-footer">
+          <div>
+            <p class="review-name">Marshall</p>
+            <p class="review-meta">Houston Coating Co.</p>
+          </div>
+          <div class="review-stars">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+
+      <!-- Review -->
+      <div class="review-card">
+        <p class="review-text">
+          Eliseo helped me develop my website for my counseling practice when I first opened.
+          I was nervous because my site was the face of my business, but he took the time
+          to understand what I wanted and made my vision come to life.
+        </p>
+
+        <div class="review-footer">
+          <div>
+            <p class="review-name">Jason Lugo</p>
+            <p class="review-meta">Anchor Of Hope Counseling</p>
+          </div>
+          <div class="review-stars">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+
+      <!-- Review -->
+      <div class="review-card">
+        <p class="review-text">
+          Eliseo provides a great service and has real passion for what he does.
+          Would absolutely recommend if you need a quality website built.
+        </p>
+
+        <div class="review-footer">
+          <div>
+            <p class="review-name">Max Krueger</p>
+            <p class="review-meta">Maximum Autocare Tx</p>
+          </div>
+          <div class="review-stars">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative z-10 bg-black border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-20">
+
+    <!-- TOP: centered logo -->
+    <div class="flex justify-center">
+      <img
+        src="assets/logo.png"
+        alt="Echelon Websites"
+        class="h-12 w-auto opacity-90"
+      />
+    </div>
+
+    <!-- subtle divider -->
+    <div class="mt-10 h-px bg-white/10"></div>
+
+    <!-- MIDDLE: nav + description -->
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-sm">
+
+      <!-- Left: brand statement -->
+      <div class="text-white/60 leading-relaxed">
+        <p>
+          Custom-coded, performance-focused websites built for brands that care
+          about perception, speed, and long-term quality.
+        </p>
+      </div>
+
+      <!-- Center: nav -->
+      <div class="flex justify-center">
+        <nav class="flex flex-col items-center gap-4 uppercase tracking-[0.25em] text-xs text-white/65">
+          <a href="#portfolio" class="hover:text-white transition">Work</a>
+          <a href="#process" class="hover:text-white transition">Process</a>
+          <a href="#reviews" class="hover:text-white transition">Reviews</a>
+          <a href="contact.html" class="hover:text-white transition">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Right: contact / credibility -->
+      <div class="md:text-right text-white/55">
+        <p>Dallas–Fort Worth</p>
+        <p class="mt-2">Private web development</p>
+        <p class="mt-4 text-xs text-white/40">
+          Serious inquiries only
+        </p>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="mt-14 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
+      <p>© <span id="year"></span> Echelon Websites. All rights reserved.</p>
+      <p>Built by hand — no templates</p>
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </main>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
