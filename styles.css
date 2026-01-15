@@ -1798,3 +1798,29 @@ header::before{
 
 .mobile-close span:nth-child(1){ transform: translate(-50%,-50%) rotate(45deg); }
 .mobile-close span:nth-child(2){ transform: translate(-50%,-50%) rotate(-45deg); }
+/* iPad / tablet tweak: keep desktop nav from overflowing */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-shell {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .nav-shell .nav-link {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+  }
+
+  .nav-shell .hidden.md\:flex {
+    gap: 18px !important;
+  }
+
+  .nav-mini-icon {
+    transform: scale(0.92);
+  }
+
+  .nav-shell a[href="contact.html"] {
+    padding: 8px 12px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.18em !important;
+  }
+}
