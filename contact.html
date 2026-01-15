@@ -17,7 +17,30 @@
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
-<!-- TOP LEFT BACK TO HOME -->
+<!-- TOP RIGHT CONTACT PILL GROUP -->
+<div class="fixed top-6 right-6 z-50 flex items-center gap-3">
+
+  <a href="mailto:eliseowebdev@gmail.com"
+     class="inline-flex items-center gap-3 px-4 py-2 rounded-full
+            border border-white/15 bg-black/50 backdrop-blur
+            text-xs tracking-[0.25em] uppercase text-white/80
+            hover:bg-white/10 transition">
+    <i class="fa-regular fa-envelope text-[11px]"></i>
+    Email
+  </a>
+
+  <a href="tel:6822153934"
+     class="inline-flex items-center gap-3 px-4 py-2 rounded-full
+            border border-white/15 bg-black/50 backdrop-blur
+            text-xs tracking-[0.25em] uppercase text-white/80
+            hover:bg-white/10 transition">
+    <i class="fa-solid fa-phone text-[11px]"></i>
+    682 215 3934
+  </a>
+
+</div>
+
+
 <a href="index.html"
    class="fixed top-6 left-6 z-50 inline-flex items-center gap-3 px-4 py-2 rounded-full
           border border-white/15 bg-black/50 backdrop-blur
@@ -163,99 +186,7 @@
             </div>
           </div>
 
-          <!-- SECTION: Website details -->
-          <div class="mb-8">
-            <h2 class="text-sm tracking-[0.3em] uppercase text-white/60">Website details</h2>
-
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-sm text-white/80">Current website (if any)</label>
-                <input name="current_website" type="url"
-                  class="mt-2 w-full rounded-xl bg-black/40 border border-white/10 px-4 py-3 text-white outline-none focus:border-white/25"
-                  placeholder="https://..." />
-              </div>
-
-              <div>
-                <label class="block text-sm text-white/80">Do you own a domain already?</label>
-                <select name="domain"
-                  class="mt-2 w-full rounded-xl bg-black/40 border border-white/10 px-4 py-3 text-white outline-none focus:border-white/25">
-                  <option value="" selected disabled>Select one</option>
-                  <option>Yes</option>
-                  <option>No</option>
-                  <option>Not sure</option>
-                </select>
-              </div>
-
-              <div>
-                <label class="block text-sm text-white/80">How many pages?</label>
-                <select name="pages"
-                  class="mt-2 w-full rounded-xl bg-black/40 border border-white/10 px-4 py-3 text-white outline-none focus:border-white/25">
-                  <option value="" selected disabled>Select one</option>
-                  <option>1 (single page)</option>
-                  <option>2–4</option>
-                  <option>5–8</option>
-                  <option>9+</option>
-                </select>
-              </div>
-
-              <div>
-                <label class="block text-sm text-white/80">Do you have brand assets ready?</label>
-                <select name="assets_ready"
-                  class="mt-2 w-full rounded-xl bg-black/40 border border-white/10 px-4 py-3 text-white outline-none focus:border-white/25">
-                  <option value="" selected disabled>Select one</option>
-                  <option>Yes (logo, colors, photos)</option>
-                  <option>Some (need help finishing)</option>
-                  <option>No (need branding help)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="mt-4">
-              <label class="block text-sm text-white/80">Pick the features you need</label>
-              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/75">
-                <label class="flex items-center gap-3">
-                  <input type="checkbox" name="features" value="Contact form" class="accent-white" />
-                  Contact form
-                </label>
-                <label class="flex items-center gap-3">
-                  <input type="checkbox" name="features" value="Booking / reservations" class="accent-white" />
-                  Booking / reservations
-                </label>
-                <label class="flex items-center gap-3">
-                  <input type="checkbox" name="features" value="Payments / deposits" class="accent-white" />
-                  Payments / deposits
-                </label>
-                <label class="flex items-center gap-3">
-                  <input type="checkbox" name="features" value="Gallery / portfolio" class="accent-white" />
-                  Gallery / portfolio
-                </label>
-                <label class="flex items-center gap-3">
-                  <input type="checkbox" name="features" value="SEO foundations" class="accent-white" />
-                  SEO foundations
-                </label>
-                <label class="flex items-center gap-3">
-                  <input type="checkbox" name="features" value="Google Analytics / tracking" class="accent-white" />
-                  Analytics / tracking
-                </label>
-                <label class="flex items-center gap-3">
-                  <input type="checkbox" name="features" value="Blog" class="accent-white" />
-                  Blog
-                </label>
-                <label class="flex items-center gap-3">
-                  <input type="checkbox" name="features" value="Other" class="accent-white" />
-                  Other (explain below)
-                </label>
-              </div>
-            </div>
-
-            <div class="mt-4">
-              <label class="block text-sm text-white/80">Anything you absolutely need on the site?</label>
-              <textarea name="must_haves" rows="3"
-                class="mt-2 w-full rounded-xl bg-black/40 border border-white/10 px-4 py-3 text-white outline-none focus:border-white/25"
-                placeholder="Examples: specific pages, a certain vibe, a competitor you like, an integration, etc."></textarea>
-            </div>
-          </div>
-
+         
           <!-- SECTION: Seriousness filter -->
           <div class="mb-8">
             <h2 class="text-sm tracking-[0.3em] uppercase text-white/60">Seriousness</h2>

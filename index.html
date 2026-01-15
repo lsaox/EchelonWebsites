@@ -19,6 +19,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&display=swap" rel="stylesheet">
 
 </head>
+<!-- SECRET RPG DIALOG (hidden until triggered) -->
+<div id="rpgEgg" class="rpg-egg" aria-hidden="true">
+  <div class="rpg-backdrop"></div>
+
+  <div class="rpg-box" role="dialog" aria-label="Secret message">
+    <div class="rpg-top">
+      <div class="rpg-title">Echelon Secret</div>
+      <button id="rpgClose" class="rpg-close" aria-label="Close">×</button>
+    </div>
+
+    <div id="rpgText" class="rpg-text"></div>
+
+    <div class="rpg-bottom">
+      <div class="rpg-hint">
+        Press <span class="rpg-key">E</span> or tap <span class="rpg-key">Next</span>
+      </div>
+
+      <button id="rpgNext" class="rpg-next" type="button">
+        Next <span class="rpg-arrow">▶</span>
+      </button>
+
+      <span class="rpg-caret" aria-hidden="true">▮</span>
+    </div>
+  </div>
+</div>
 
 <body class="bg-black text-white overflow-x-hidden">
 
@@ -74,13 +99,40 @@
   </div>
 
   <!-- Desktop CTA -->
+ <!-- Desktop contact icons + CTA -->
+<div class="hidden sm:flex items-center gap-3">
+
+  <!-- Email icon -->
+  <a
+    href="mailto:eliseowebdev@gmail.com"
+    class="nav-mini-icon"
+    aria-label="Email"
+  >
+    <i class="fa-regular fa-envelope"></i>
+  </a>
+
+  <!-- Phone icon -->
+  <a
+    href="tel:6822153934"
+    class="nav-mini-icon"
+    aria-label="Call"
+  >
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <!-- CTA -->
   <a
     href="contact.html"
-    class="hidden sm:flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 text-xs tracking-[0.25em] uppercase hover:bg-white/10 transition"
+    class="flex items-center gap-2 px-5 py-2 rounded-full
+           border border-white/20 text-xs tracking-[0.25em] uppercase
+           hover:bg-white/10 transition"
   >
     Start Project
     <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
   </a>
+
+</div>
+
 
   <!-- Mobile: right spacer (keeps center logo truly centered) -->
   <div class="md:hidden mobile-right-spacer" aria-hidden="true"></div>
@@ -102,6 +154,22 @@
     <a href="#services" class="mobile-link">Services</a>
     <a href="#process" class="mobile-link">Process</a>
     <a href="contact.html" class="mobile-link">Contact</a>
+<!-- Mobile contact icons -->
+<div class="mt-8 flex justify-center gap-6">
+
+  <a href="mailto:eliseowebdev@gmail.com"
+     class="mobile-contact-icon"
+     aria-label="Email">
+    <i class="fa-regular fa-envelope"></i>
+  </a>
+
+  <a href="tel:6822153934"
+     class="mobile-contact-icon"
+     aria-label="Call">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+</div>
 
     <a href="contact.html" class="mobile-cta">
       Start Project <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
@@ -134,12 +202,12 @@
         </p>
 
         <div class="fade delay-4 mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#" class="btn-primary">
+          <a href="contact.html" class="btn-primary">
             Book a Call
             <i class="fa-solid fa-arrow-right-long text-[12px]"></i>
           </a>
 
-          <a href="#work" class="btn-ghost">
+          <a href="#portfolio" class="btn-ghost">
             View Work
             <i class="fa-regular fa-circle-play"></i>
           </a>
@@ -463,132 +531,154 @@
     </div>
 
   </div>
+<style>
+  /* SECTION */
+  .portfolio-section{
+    padding: clamp(2.25rem, 4vw, 3.5rem) 0;
+    position: relative;
+  }
 
-  <style>
-    /* SECTION */
-    .portfolio-section{
-      padding: 2rem 0;
-      position: relative;
-    }
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 24px); /* mobile-safe */
+  }
 
-    .container{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+  /* HEADER */
+  .portfolio-head{
+    max-width: 720px;
+    margin: 0 auto clamp(2.5rem, 5vw, 4.5rem);
+    text-align: center;
+  }
 
-    /* HEADER */
-    .portfolio-head{
-      max-width: 720px;
-      margin: 0 auto 4.5rem;
-      text-align: center;
-    }
+  .kicker{
+    font-size: 12px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+  }
 
-    .kicker{
-      font-size: 12px;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-      margin: 0;
-    }
+  .title{
+    margin: 16px 0 0;
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.1;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.801);
+    word-break: break-word;
+  }
 
-    .title{
-      margin: 16px 0 0;
-      font-size: 48px;
-      line-height: 1.1;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.801);
-    }
+  .sub{
+    margin-top: 14px;
+    font-size: clamp(15px, 1.8vw, 17px);
+    line-height: 1.7;
+    color: rgba(255,255,255,0.6);
+  }
 
-    .sub{
-      margin-top: 16px;
-      font-size: 17px;
-      line-height: 1.7;
-      color: rgba(255,255,255,0.6);
-    }
+  /* WORK LIST */
+  .work-list{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2.75rem, 6vw, 6rem); /* responsive spacing */
+  }
 
-    /* WORK LIST */
-    .work-list{
-      display: flex;
-      flex-direction: column;
-      gap: 6rem; /* controlled spacing */
-    }
+  .work-item{
+    display: block;
+    max-width: 980px;
+    margin: 0 auto;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
 
-    .work-item{
-      display: block;
-      max-width: 980px;
-      margin: 0 auto;
-      text-decoration: none;
-    }
+  /* UNIFORM TITLE SIZE (fluid on mobile) */
+  .work-heading{
+    margin: 0 0 16px;
+    font-size: clamp(20px, 4.2vw, 34px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: rgba(255,255,255,0.95);
+    line-height: 1.15;
+    overflow-wrap: anywhere; /* prevents long domain overflow */
+  }
 
-    /* UNIFORM TITLE SIZE */
-    .work-heading{
-      margin: 0 0 18px;
-      font-size: 34px;          /* LOCKED SIZE */
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      color: rgba(255,255,255,0.95);
-    }
+  /* IMAGE */
+  .work-media{
+    position: relative;
+    height: clamp(220px, 52vw, 420px); /* responsive height */
+    border-radius: clamp(14px, 3vw, 20px);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+  }
 
-    /* IMAGE */
-    .work-media{
-      position: relative;
-      height: 420px;           /* LOCKED HEIGHT */
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.02);
-    }
+  .work-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.92;
+    transform: scale(1.02);
+    transition: transform 700ms ease, opacity 400ms ease;
+    display: block;
+  }
 
-    .work-media img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.92;
-      transform: scale(1.02);
-      transition: transform 700ms ease, opacity 400ms ease;
-      display: block;
-    }
+  .work-item:hover img{
+    transform: scale(1.01);
+    opacity: 1;
+  }
 
-    .work-item:hover img{
-      transform: scale(1.01);
-      opacity: 1;
-    }
+  .work-scrim{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.12)
+    );
+    pointer-events: none;
+  }
 
-    .work-scrim{
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.12)
-      );
-    }
+  /* LEFT → RIGHT REVEAL */
+  .work-reveal-lr{
+    opacity: 0;
+    transform: translateX(-24px);
+    will-change: transform, opacity;
+  }
 
-    /* LEFT → RIGHT REVEAL */
-    .work-reveal-lr{
-      opacity: 0;
-      transform: translateX(-24px);
-    }
+  .work-reveal-lr.in{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 700ms cubic-bezier(.2,.7,.2,1);
+  }
 
+  /* stagger (keep, but apply to all items) */
+  .work-reveal-lr.in:nth-of-type(1){ transition-delay: 0ms; }
+  .work-reveal-lr.in:nth-of-type(2){ transition-delay: 120ms; }
+  .work-reveal-lr.in:nth-of-type(3){ transition-delay: 240ms; }
+  .work-reveal-lr.in:nth-of-type(4){ transition-delay: 360ms; }
+  .work-reveal-lr.in:nth-of-type(5){ transition-delay: 480ms; }
+  .work-reveal-lr.in:nth-of-type(6){ transition-delay: 600ms; }
+
+  /* MOBILE TWEAKS */
+  @media (max-width: 768px){
+    .portfolio-head{ margin-bottom: 2.75rem; }
+    .work-heading{ margin-bottom: 14px; }
+  }
+
+  /* Reduce motion accessibility */
+  @media (prefers-reduced-motion: reduce){
+    .work-reveal-lr,
     .work-reveal-lr.in{
-      opacity: 1;
-      transform: translateX(0);
-      transition: 700ms cubic-bezier(.2,.7,.2,1);
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
     }
-
-    .work-reveal-lr.in:nth-of-type(1){ transition-delay: 0ms; }
-    .work-reveal-lr.in:nth-of-type(2){ transition-delay: 120ms; }
-    .work-reveal-lr.in:nth-of-type(3){ transition-delay: 240ms; }
-    .work-reveal-lr.in:nth-of-type(4){ transition-delay: 360ms; }
-
-    @media (max-width: 768px){
-      .title{ font-size: 38px; }
-      .work-heading{ font-size: 28px; }
-      .work-media{ height: 300px; }
-      .work-list{ gap: 4.5rem; }
+    .work-media img{
+      transition: none !important;
+      transform: none !important;
     }
-  </style>
+  }
+</style>
 
   <script>
     // Reveal once, left → right
@@ -608,6 +698,17 @@
   </script>
 </section>
 
+<div id="zombies-egg" class="zombies-overlay">
+  <video
+    id="zombies-video"
+    muted
+    playsinline
+    preload="auto"
+    webkit-playsinline
+  >
+    <source src="/assets/115.mp4" type="video/mp4" />
+  </video>
+</div>
 
 <!-- REVIEWS -->
 <section id="reviews" class="relative z-10 bg-black py-24 sm:py-32 border-t border-white/10">
@@ -686,61 +787,54 @@
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
-<footer class="relative z-10 bg-black border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-20">
+<footer class="glass-footer">
+  <div class="footer-shell">
 
-    <!-- TOP: centered logo -->
-    <div class="flex justify-center">
-      <img
-        src="assets/logo.png"
-        alt="Echelon Websites"
-        class="h-12 w-auto opacity-90"
-      />
+    <!-- LOGO COLUMN -->
+    <div class="footer-brand">
+<img
+  src="assets/logo.png"
+  alt="Echelon Websites"
+  id="footer-logo"
+  class="footer-logo-easter"
+/>
     </div>
 
-    <!-- subtle divider -->
-    <div class="mt-10 h-px bg-white/10"></div>
+    <!-- LINKS -->
+    <div class="footer-grid">
 
-    <!-- MIDDLE: nav + description -->
-    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-sm">
-
-      <!-- Left: brand statement -->
-      <div class="text-white/60 leading-relaxed">
-        <p>
-          Custom-coded, performance-focused websites built for brands that care
-          about perception, speed, and long-term quality.
-        </p>
+      <div class="footer-col">
+        <h4>Echelon</h4>
+        <a href="#portfolio">Work</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="contact.html">Contact</a>
       </div>
 
-      <!-- Center: nav -->
-      <div class="flex justify-center">
-        <nav class="flex flex-col items-center gap-4 uppercase tracking-[0.25em] text-xs text-white/65">
-          <a href="#portfolio" class="hover:text-white transition">Work</a>
-          <a href="#process" class="hover:text-white transition">Process</a>
-          <a href="#reviews" class="hover:text-white transition">Reviews</a>
-          <a href="contact.html" class="hover:text-white transition">Contact</a>
-        </nav>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#">Custom Websites</a>
+        <a href="#">Visual Design</a>
+        <a href="#">SEO Foundations</a>
+        <a href="#">Maintenance</a>
       </div>
 
-      <!-- Right: contact / credibility -->
-      <div class="md:text-right text-white/55">
-        <p>Dallas–Fort Worth</p>
-        <p class="mt-2">Private web development</p>
-        <p class="mt-4 text-xs text-white/40">
-          Serious inquiries only
-        </p>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:6822153934">682 · 215 · 3934</a>
+        <a href="mailto:eliseowebdev@gmail.com">eliseowebdev@gmail.com</a>
+        <span class="footer-muted">Dallas–Fort Worth</span>
       </div>
 
     </div>
+  </div>
 
-    <!-- BOTTOM -->
-    <div class="mt-14 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
-      <p>© <span id="year"></span> Echelon Websites. All rights reserved.</p>
-      <p>Built by hand — no templates</p>
-    </div>
-
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    © <span id="year"></span> Echelon Websites — Echelon starts with me.
+I get brighter every time you say hello.
+I only speak after the fifth one.... 
   </div>
 </footer>
 
@@ -758,6 +852,162 @@
 
     
   </main>
+<script>
+(() => {
+  // Change this selector if your footer logo isn't the first footer img
+  const footerLogo = document.querySelector("footer img");
+  const egg = document.getElementById("rpgEgg");
+  const textEl = document.getElementById("rpgText");
+  const nextBtn = document.getElementById("rpgNext");
+  const closeBtn = document.getElementById("rpgClose");
+
+  if (!footerLogo || !egg || !textEl || !nextBtn || !closeBtn) return;
+
+  const lines = [
+  "Wow… I can’t believe you found this.",
+  "This is a little Easter egg from the developer to you.",
+  "Thanks for visiting my website — seriously.",
+  "Nice mustache, by the way.",
+  "I don’t know if you actually have a mustache…",
+  "but I figured I’d guess. Felt right.",
+  "Anyway — have a good day.",
+  "— Echelon Developers"
+  ];
+
+  let taps = 0;
+  let tapTimer = null;
+  let idx = 0;
+  let typingTimer = null;
+
+  const typeLine = (str) => {
+    clearInterval(typingTimer);
+    textEl.textContent = "";
+    let i = 0;
+    typingTimer = setInterval(() => {
+      textEl.textContent += str[i] || "";
+      i++;
+      if (i >= str.length) clearInterval(typingTimer);
+    }, 18);
+  };
+
+  const openEgg = () => {
+    egg.classList.add("show");
+    egg.setAttribute("aria-hidden", "false");
+    idx = 0;
+    typeLine(lines[idx]);
+  };
+
+  const closeEgg = () => {
+    egg.classList.remove("show");
+    egg.setAttribute("aria-hidden", "true");
+    clearInterval(typingTimer);
+  };
+
+  const next = () => {
+    idx++;
+    if (idx >= lines.length) {
+      closeEgg();
+      return;
+    }
+    typeLine(lines[idx]);
+  };
+
+  // Hard to find: click logo 6 times quickly (tweak to 5 if you want easier)
+  footerLogo.addEventListener("click", () => {
+    taps++;
+    clearTimeout(tapTimer);
+    tapTimer = setTimeout(() => (taps = 0), 1400);
+
+    if (taps === 5) {
+      openEgg();
+      taps = 0;
+    }
+  });
+
+  nextBtn.addEventListener("click", next);
+  closeBtn.addEventListener("click", closeEgg);
+
+  // Click backdrop closes
+  egg.querySelector(".rpg-backdrop").addEventListener("click", closeEgg);
+
+  // Keyboard: E = next, ESC = close
+  window.addEventListener("keydown", (e) => {
+    if (!egg.classList.contains("show")) return;
+
+    if (e.key.toLowerCase() === "e" || e.key === "Enter") next();
+    if (e.key === "Escape") closeEgg();
+  });
+})();
+</script>
+<script>
+  const logo = document.getElementById("footer-logo");
+  let pressCount = 0;
+
+  logo.addEventListener("click", () => {
+    pressCount++;
+
+    logo.classList.remove(
+      "glow-1","glow-2","glow-3","glow-4","glow-5"
+    );
+
+    const level = Math.min(pressCount, 5);
+    logo.classList.add(`glow-${level}`);
+
+    if (pressCount === 5) {
+      triggerEasterEgg();
+    }
+  });
+
+  function triggerEasterEgg() {
+    console.log("🎮 Easter egg unlocked");
+    // open modal
+    // show retro dialog
+    // play sound
+    // etc
+  }
+</script>
+<script>
+  let keyBuffer = "";
+
+  document.addEventListener("keydown", (e) => {
+    if (!/^[0-9]$/.test(e.key)) return;
+
+    keyBuffer += e.key;
+    keyBuffer = keyBuffer.slice(-3);
+
+    if (keyBuffer === "115") {
+      triggerZombiesEgg();
+      keyBuffer = "";
+    }
+  });
+
+  function triggerZombiesEgg() {
+    const overlay = document.getElementById("zombies-egg");
+    const video = document.getElementById("zombies-video");
+
+    // show overlay FIRST
+    overlay.classList.add("show");
+
+    // wait one frame so browser allows playback
+    requestAnimationFrame(() => {
+      video.currentTime = 0;
+      const playPromise = video.play();
+
+      // handle Safari/Chrome safely
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          console.warn("Autoplay blocked — but should still work on interaction.");
+        });
+      }
+    });
+
+    // hide after video length
+    setTimeout(() => {
+      overlay.classList.remove("show");
+      video.pause();
+    }, 2800);
+  }
+</script>
 
   <!-- JS -->
   <script src="script.js"></script>

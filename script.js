@@ -63,3 +63,39 @@
   })();
 
 
+logo.addEventListener("mouseleave", () => {
+  pressCount = 0;
+  logo.classList.remove(
+    "glow-1","glow-2","glow-3","glow-4","glow-5"
+  );
+});
+
+  let keyBuffer = "";
+
+  document.addEventListener("keydown", (e) => {
+    // only track numbers
+    if (!/^[0-9]$/.test(e.key)) return;
+
+    keyBuffer += e.key;
+
+    // keep last 3 keys
+    if (keyBuffer.length > 3) {
+      keyBuffer = keyBuffer.slice(-3);
+    }
+
+    if (keyBuffer === "115") {
+      triggerZombiesEgg();
+      keyBuffer = "";
+    }
+  });
+
+  function triggerZombiesEgg() {
+    const overlay = document.getElementById("zombies-egg");
+    overlay.classList.add("show");
+
+    // auto-hide after 3 seconds
+    setTimeout(() => {
+      overlay.classList.remove("show");
+    }, 3000);
+  }
+
