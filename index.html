@@ -832,11 +832,193 @@
   </div>
 
   <!-- BOTTOM BAR -->
-  <div class="footer-bottom">
-    © <span id="year"></span> Echelon Websites — Echelon starts with me.
-I get brighter every time you say hello.
-I only speak after the fifth press.... And I live within the footer..
-  </div>
+<!-- FOOTER BOTTOM (simple) -->
+<div class="footer-bottom-simple">
+  <span class="footer-copy">
+    © <span id="year"></span> Echelon — All rights reserved
+  </span>
+
+  <span class="egg-inline">
+    <!-- ? above the image -->
+    <span id="eggQ" class="egg-q" aria-hidden="true">?</span>
+
+    <!-- small image button -->
+    <button id="eggBtn" class="egg-btn" type="button" aria-label="Easter egg">
+      <img src="assets/egg.png" alt="" class="egg-img" />
+    </button>
+  </span>
+
+  <!-- riddle text (appears after 2nd press) -->
+  <span id="eggRiddle" class="egg-riddle" aria-hidden="true">
+    Echelon starts with me. I get brighter every time you say hello.
+    I only speak after the fifth press…. And I live within the footer..
+  </span>
+</div>
+
+<style>
+  .footer-bottom-simple{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    padding:16px 14px;
+    border-top:1px solid rgba(255,255,255,0.10);
+  }
+  .footer-copy{
+    font-size:12px;
+    opacity:0.65;
+    letter-spacing:0.10em;
+  }
+
+  .egg-inline{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+  }
+  .egg-btn{
+    background:transparent;
+    border:none;
+    padding:2px;
+    cursor:pointer;
+    line-height:0;
+  }
+  .egg-img{
+    width:16px;
+    height:16px;
+    display:block;
+    opacity:0.8;
+    transition:transform 160ms ease, opacity 160ms ease;
+  }
+  .egg-btn:hover .egg-img{
+    opacity:1;
+    transform:translateY(-1px);
+  }
+
+  .egg-q{
+    position:absolute;
+    left:50%;
+    top:-14px;
+    transform:translateX(-50%) translateY(6px);
+    opacity:0;
+    font-weight:800;
+    font-size:13px;
+    transition:opacity 180ms ease, transform 180ms ease;
+    pointer-events:none;
+    text-shadow:0 0 10px rgba(255,255,255,0.25);
+  }
+  .egg-q.show{
+    opacity:0.9;
+    transform:translateX(-50%) translateY(0px);
+  }
+
+  .egg-riddle{
+    display:none;
+    font-size:12px;
+    opacity:0.6;
+    letter-spacing:0.08em;
+    max-width:560px;
+    text-align:center;
+  }
+  .egg-riddle.show{ display:inline; }
+
+  @media (max-width:520px){
+    .egg-riddle.show{ display:block; margin-top:8px; }
+  }/* =========================
+   FOOTER EASTER EGG
+========================= */
+
+/* clickable egg image */
+.echelon-egg{
+  width: 52px;              /* BIGGER */
+  height: 52px;
+  object-fit: contain;
+  opacity: 0.5;
+  transition:
+    opacity .3s ease,
+    transform .2s ease,
+    filter .3s ease;
+}
+
+/* hover hint */
+#echelon-trigger:hover .echelon-egg{
+  opacity: 0.85;
+  filter: drop-shadow(0 0 14px rgba(120,90,255,0.65));
+  transform: scale(1.5);
+}
+
+/* hidden message */
+.echelon-secret{
+  margin-top: 18px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;   /* subtle, readable */
+  text-transform: none;    /* NOT ALL CAPS */
+  color: rgba(255,255,255,0.7);
+  animation: fadeInSoft 0.8s ease forwards;
+}
+
+/* fade-in animation */
+@keyframes fadeInSoft{
+  from{
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+
+<script>
+(() => {
+  // Year
+  const y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
+
+  // Egg logic
+  const btn = document.getElementById("eggBtn");
+  const q = document.getElementById("eggQ");
+  const r = document.getElementById("eggRiddle");
+  if (!btn || !q || !r) return;
+
+  let presses = 0;
+
+  btn.addEventListener("click", () => {
+    presses++;
+
+    if (presses === 1) {
+      q.classList.add("show");
+      q.setAttribute("aria-hidden","false");
+      r.classList.remove("show");
+      r.setAttribute("aria-hidden","true");
+      return;
+    }
+
+    if (presses === 2) {
+      q.classList.remove("show");
+      q.setAttribute("aria-hidden","true");
+      r.classList.add("show");
+      r.setAttribute("aria-hidden","false");
+      return;
+    }
+
+    // third press resets (optional)
+    presses = 0;
+    q.classList.remove("show");
+    r.classList.remove("show");
+    q.setAttribute("aria-hidden","true");
+    r.setAttribute("aria-hidden","true");
+  });
+})();
+</script>
+
+
 </footer>
 
 

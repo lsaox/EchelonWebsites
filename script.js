@@ -99,3 +99,41 @@ logo.addEventListener("mouseleave", () => {
     }, 3000);
   }
 
+(() => {
+  const eggBtn = document.getElementById("eggBtn");
+  const eggQ = document.getElementById("eggQ");
+  const eggRiddle = document.getElementById("eggRiddle");
+  if (!eggBtn || !eggQ || !eggRiddle) return;
+
+  let presses = 0;
+  let resetTimer = null;
+
+  const reset = () => {
+    presses = 0;
+    eggQ.classList.remove("show");
+    eggRiddle.classList.remove("show");
+    eggQ.setAttribute("aria-hidden", "true");
+    eggRiddle.setAttribute("aria-hidden", "true");
+  };
+
+  eggBtn.addEventListener("click", () => {
+    presses++;
+    clearTimeout(resetTimer);
+    resetTimer = setTimeout(reset, 9000); // auto-reset after 9s
+
+    if (presses === 1) {
+      eggQ.classList.add("show");
+      eggQ.setAttribute("aria-hidden", "false");
+    }
+
+    if (presses === 2) {
+      eggRiddle.classList.add("show");
+      eggRiddle.setAttribute("aria-hidden", "false");
+    }
+
+    if (presses >= 3) {
+      // third press closes everything (feels game-y)
+      reset();
+    }
+  });
+})();
