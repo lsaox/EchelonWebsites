@@ -1,13 +1,4 @@
-// ===== Scale section reveal + spotlight tracking =====
-(() => {
-  // reveal cards on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) e.target.classList.add("in");
-    });
-  }, { threshold: 0.2 });
 
-  document.querySelectorAll(".reveal-card").forEach((el) => io.observe(el));
 
   // spotlight mouse follow per card
   document.querySelectorAll(".scale-card").forEach((card) => {
@@ -19,7 +10,7 @@
       card.style.setProperty("--my", `${y}%`);
     });
   });
-})();
+
 
 
   (() => {
