@@ -4,19 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Echelon Websites</title>
-<!-- Open Graph Meta -->
-<meta property="og:title" content="Echelon Websites – Custom Coded High-End Websites">
-<meta property="og:description" content="High-end custom-coded websites built for businesses that want to stand out.">
-<meta property="og:image" content="https://echelonwebsites.com/assets/og-image.jpg">
-<meta property="og:image:secure_url" content="https://echelonwebsites.com/assets/og-image.jpg">
-<meta property="og:image:type" content="image/jpeg">
 
-<!-- Optional but recommended -->
-<meta property="fb:app_id" content="966242223397117">
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Echelon Websites – Custom Coded High-End Websites">
+  <meta property="og:description" content="High-end custom-coded websites built for businesses that want to stand out.">
+  <meta property="og:image" content="https://echelonwebsites.com/assets/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://echelonwebsites.com/assets/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+
+  <!-- Optional but recommended -->
+  <meta property="fb:app_id" content="966242223397117">
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
@@ -26,10 +28,10 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="/assets/favicon.png">
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-</head>
 
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+</head>
 
 <body class="bg-black text-white overflow-x-hidden">
 
@@ -45,1196 +47,869 @@
 
   <!-- NAVBAR -->
   <header class="relative z-20">
-  <!-- REPLACE your <nav ...> ... </nav> with this (same desktop, clean mobile) -->
-<nav class="nav-shell max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-  <!-- Left: Logo (desktop) -->
-  <a href="#" class="brand-left hidden md:flex items-center gap-3 group">
-    <img
-      src="assets/logo.png"
-      alt="Echelon Websites"
-      class="h-9 w-auto opacity-90 group-hover:opacity-100 transition"
-    />
-    <div class="leading-tight">
-      <span class="block text-[11px] tracking-[0.35em] uppercase text-white/80">Echelon</span>
-      <span class="block text-[10px] tracking-[0.45em] uppercase text-white/40">Websites</span>
-    </div>
-  </a>
-
-  <!-- Mobile: Menu button (left) -->
-  <button
-    class="md:hidden mobile-menu-btn"
-    type="button"
-    aria-label="Open menu"
-    aria-expanded="false"
-    aria-controls="mobileMenu"
-  >
-    <span class="burger" aria-hidden="true"></span>
-  </button>
-
-  <!-- Mobile: Center logo -->
-  <a href="#" class="md:hidden brand-center">
-    <img src="assets/logo.png" alt="Echelon Websites" class="h-9 w-auto opacity-95" />
-  </a>
-
-  <!-- Desktop nav links -->
-  <div class="hidden md:flex items-center gap-10 text-[13px] tracking-[0.25em] uppercase text-white/60">
-    <a href="#portfolio" class="nav-link">Work</a>
-    <a href="#services" class="nav-link">Services</a>
-    <a href="#process" class="nav-link">Process</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-  </div>
-
-  <!-- Desktop CTA -->
- <!-- Desktop contact icons + CTA -->
-<div class="hidden sm:flex items-center gap-3">
-
-  <!-- Email icon -->
-  <a
-    href="mailto:eliseowebdev@gmail.com"
-    class="nav-mini-icon"
-    aria-label="Email"
-  >
-    <i class="fa-regular fa-envelope"></i>
-  </a>
-
-  <!-- Phone icon -->
-  <a
-    href="tel:6822153934"
-    class="nav-mini-icon"
-    aria-label="Call"
-  >
-    <i class="fa-solid fa-phone"></i>
-  </a>
-
-  <!-- CTA -->
-  <a
-    href="contact.html"
-    class="flex items-center gap-2 px-5 py-2 rounded-full
-           border border-white/20 text-xs tracking-[0.25em] uppercase
-           hover:bg-white/10 transition"
-  >
-    Start Project
-    <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
-  </a>
-
-</div>
-
-
-  <!-- Mobile: right spacer (keeps center logo truly centered) -->
-  <div class="md:hidden mobile-right-spacer" aria-hidden="true"></div>
-</nav>
-
-<!-- MOBILE MENU PANEL (put right after nav) -->
-<div id="mobileMenu" class="mobile-menu md:hidden" aria-hidden="true">
-  
-  <!-- CLOSE BUTTON -->
-  <button class="mobile-close" aria-label="Close menu">
-    <span></span>
-    <span></span>
-  </button>
-
-  <div class="mobile-menu-backdrop"></div>
-
-  <div class="mobile-menu-inner">
-    <a href="#portfolio" class="nav-link">Work</a>
-    <a href="#services" class="nav-link">Services</a>
-    <a href="#process" class="nav-link">Process</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-<!-- Mobile contact icons -->
-<div class="mt-8 flex justify-center gap-6">
-
-  <a href="mailto:eliseowebdev@gmail.com"
-     class="mobile-contact-icon"
-     aria-label="Email">
-    <i class="fa-regular fa-envelope"></i>
-  </a>
-
-  <a href="tel:6822153934"
-     class="mobile-contact-icon"
-     aria-label="Call">
-    <i class="fa-solid fa-phone"></i>
-  </a>
-
-</div>
-
-    <a href="contact.html" class="mobile-cta">
-      Start Project <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
-    </a>
-  </div>
-</div>
-  </header>
-
-  <!-- HERO -->
-  <main class="relative z-10">
- <section class="min-h-[88vh] flex items-center">
-  <div class="max-w-7xl mx-auto px-6 w-full">
-    <div class="flex justify-center">
-      <div class="max-w-3xl text-center">
-
-        <div class="fade delay-1 inline-flex items-center justify-center gap-3 px-4 py-2 mx-auto">
-          <span class="text-xs tracking-[0.3em] uppercase text-white/70">
-            Private Web Development
-          </span>
+    <nav class="nav-shell max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <!-- Left: Logo (desktop) -->
+      <a href="#" class="brand-left hidden md:flex items-center gap-3 group">
+        <img
+          src="assets/logo.png"
+          alt="Echelon Websites"
+          class="h-9 w-auto opacity-90 group-hover:opacity-100 transition"
+        />
+        <div class="leading-tight">
+          <span class="block text-[11px] tracking-[0.35em] uppercase text-white/80">Echelon</span>
+          <span class="block text-[10px] tracking-[0.45em] uppercase text-white/40">Websites</span>
         </div>
+      </a>
 
-        <h1 class="fade delay-2 mt-6 text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-semibold">
-          <span class="hero-orbitron">Custom Coded Websites</span> crafted at a higher <br class="hidden sm:block" />
-       <span class="text-accent">level</span>.
-        </h1>
-
-        <p class="fade delay-3 mt-6 mx-auto max-w-xl text-white/65 text-lg leading-relaxed">
-          We design and build cinematic, conversion-focused websites for brands
-          that care about detail, performance, and perception.
-        </p>
-
-        <div class="fade delay-4 mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="contact.html" class="btn-primary">
-            Book a Call
-            <i class="fa-solid fa-arrow-right-long text-[12px]"></i>
-          </a>
-
-          <a href="#portfolio" class="btn-ghost">
-            View Work
-            <i class="fa-regular fa-circle-play"></i>
-          </a>
-        </div>
-
-    
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<section class="ticker-wrap"> 
-  <div class="ticker-shell">
-    <p class="ticker-title">Services and tools </p>
-
-    <div class="ticker">
-      <div class="ticker-track">
-        <!-- SET 1 -->
-        <span class="pill">Custom Coded Websites</span>
-        <span class="pill">Custom Visual Design</span>
-        <span class="pill">Graphic Design and Branding</span>
-        <span class="pill">SEO Foundations</span>
-        <span class="pill">Monthly Maintenance</span>
-        <span class="pill">Domain and DNS Management</span>
-        <span class="pill">Custom Hosting Setup</span>
-        <span class="pill">Form Management</span>
-
-        <span class="stack">Tailwind CSS</span>
-        <span class="stack">React</span>
-        <span class="stack">GitHub Version Control</span>
-        <span class="stack">Performance Optimization</span>
-
-        <!-- SET 2 (duplicate for seamless loop) -->
-        <span class="pill">Custom Coded Websites</span>
-        <span class="pill">Custom Visual Design</span>
-        <span class="pill">Graphic Design and Branding</span>
-        <span class="pill">SEO Foundations</span>
-        <span class="pill">Monthly Maintenance</span>
-        <span class="pill">Domain and DNS Management</span>
-        <span class="pill">Custom Hosting Setup</span>
-        <span class="pill">Form Management</span>
-
-        <span class="stack">Tailwind CSS</span>
-        <span class="stack">React</span>
-        <span class="stack">GitHub Version Control</span>
-        <span class="stack">Performance Optimization</span>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- COLLAGE COMMAND SECTION -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="services" class="platform-section relative z-10 py-24 sm:py-32 bg-black">
-  <div class="max-w-7xl mx-auto px-6">
-    <p class="fade delay-1 text-xs tracking-[0.35em] uppercase text-white/60">
-      The Echelon Platform
-    </p>
-
-    <h2 class="fade delay-2 mt-5 text-[42px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-semibold">
-      Whatever you envision,<br class="hidden sm:block" />
-      we bring it to life faster.
-    </h2>
-
-    <p class="fade delay-3 mt-6 max-w-3xl text-white/60 text-lg leading-relaxed">
-      From founders to established teams, we build premium web experiences with
-      clean design, confident storytelling, and performance that feels effortless.
-    </p>
-
-    <div class="fade delay-4 mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fa-regular fa-window-maximize"></i>
-        </div>
-        <h3 class="feature-title">Custom builds</h3>
-        <p class="feature-text">
-          Tailored layouts and components designed around your brand, not a template.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fa-regular fa-circle-check"></i>
-        </div>
-        <h3 class="feature-title">Review and polish</h3>
-        <p class="feature-text">
-          A clean feedback flow with revisions that refine the details and elevate the finish.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fa-solid fa-gauge-high"></i>
-        </div>
-        <h3 class="feature-title">Speed and performance</h3>
-        <p class="feature-text">
-          Fast loading pages, smooth motion, and strong foundations for search visibility.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fa-regular fa-paper-plane"></i>
-        </div>
-        <h3 class="feature-title">Launch ready delivery</h3>
-        <p class="feature-text">
-          Clean handoff, hosting guidance, and support so your site goes live with confidence.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- PROCESS (Framer-style centered + square card) -->
-<section id="process" class="relative z-10 py-24 sm:py-32">
-  <div class="max-w-7xl mx-auto px-6">
-    <!-- Centered header -->
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="text-xs tracking-[0.35em] uppercase text-white/60">
-        Process
-      </p>
-
-      <h2 class="mt-5 text-[40px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-semibold">
-        A clean process that<br class="hidden sm:block" />
-        moves fast and is custom to you.
-      </h2>
-
-      <p class="mt-6 text-white/60 text-lg leading-relaxed">
-
-      </p>
-    </div>
-
-    <!-- Square card -->
-    <div class="mt-14 flex justify-center">
-      <div class="process-square">
-        <!-- Step -->
-        <div class="process-step">
-          <div class="process-num">01</div>
-          <div class="process-body">
-            <h3 class="process-title">Discovery</h3>
-            <p class="process-text">
-              We lock in goals, pages, vibe, and what “success” looks like.
-            </p>
-          </div>
-        </div>
-
-        <div class="process-divider"></div>
-
-        <div class="process-step">
-          <div class="process-num">02</div>
-          <div class="process-body">
-            <h3 class="process-title">Design Direction</h3>
-            <p class="process-text">
-              Layout, typography, and visuals — we build a look that fits your level.
-            </p>
-          </div>
-        </div>
-
-        <div class="process-divider"></div>
-
-        <div class="process-step">
-          <div class="process-num">03</div>
-          <div class="process-body">
-            <h3 class="process-title">Build</h3>
-            <p class="process-text">
-              Custom-coded sections, smooth motion, responsive polish, and performance.
-            </p>
-          </div>
-        </div>
-
-        <div class="process-divider"></div>
-
-        <div class="process-step">
-          <div class="process-num">04</div>
-          <div class="process-body">
-            <h3 class="process-title">Launch + Support</h3>
-            <p class="process-text">
-              DNS + hosting setup, form testing, and clean handoff with optional maintenance.
-            </p>
-          </div>
-        </div>
-
-        <!-- CTA row -->
-        <div class="process-cta">
-          <a href="contact.html" class="process-btn">
-            Start a project <i class="fa-solid fa-arrow-right-long text-[12px]"></i>
-          </a>
-          <span class="process-note">Typical timeline: 7–21 days</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SECRET RPG DIALOG (hidden until triggered) -->
-<div id="rpgEgg" class="rpg-egg" aria-hidden="true">
-  <div class="rpg-backdrop"></div>
-
-  <div class="rpg-box" role="dialog" aria-label="Secret message">
-    <div class="rpg-top">
-      <div class="rpg-title">Echelon Secret</div>
-      <button id="rpgClose" class="rpg-close" aria-label="Close">×</button>
-    </div>
-
-    <div id="rpgText" class="rpg-text"></div>
-
-    <div class="rpg-bottom">
-      <div class="rpg-hint">
-        Press <span class="rpg-key">E</span> or tap <span class="rpg-key">Next</span>
-      </div>
-
-      <button id="rpgNext" class="rpg-next" type="button">
-        Next <span class="rpg-arrow">▶</span>
+      <!-- Mobile: Menu button (left) -->
+      <button
+        class="md:hidden mobile-menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span class="burger" aria-hidden="true"></span>
       </button>
 
-      <span class="rpg-caret" aria-hidden="true">▮</span>
-    </div>
-  </div>
-</div>
+      <!-- Mobile: Center logo -->
+      <a href="#" class="md:hidden brand-center">
+        <img src="assets/logo.png" alt="Echelon Websites" class="h-9 w-auto opacity-95" />
+      </a>
 
-
-
-
-
-<section id="command" class="command-section relative z-10 py-24 sm:py-32">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="command-stage">
-      <!-- collage layer -->
-      <div class="command-collage" aria-hidden="true">
-        <img class="c-img c-1" src="assets/chill.png" alt="" />
-        <img class="c-img c-2" src="assets/SpecialtyCars.png" alt="" />
-        <img class="c-img c-3" src="assets/max.png" alt="" />
-        <img class="c-img c-4" src="assets/Elixir.png" alt="" />
-        <img class="c-img c-5" src="assets/anchor.png" alt="" />
+      <!-- Desktop nav links -->
+      <div class="hidden md:flex items-center gap-10 text-[13px] tracking-[0.25em] uppercase text-white/60">
+        <a href="#portfolio" class="nav-link">Work</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </div>
 
-      <!-- centered "command bar" -->
-      <div class="command-card">
-        <div class="command-inner">
-          <h3 class="command-text">
-            From Entrepenuers to Enterprises<span class="command-caret">|</span>
-          </h3>
+      <!-- Desktop contact icons + CTA -->
+      <div class="hidden sm:flex items-center gap-3">
+        <!-- Email icon -->
+        <a
+          href="mailto:eliseowebdev@gmail.com"
+          class="nav-mini-icon"
+          aria-label="Email"
+        >
+          <i class="fa-regular fa-envelope"></i>
+        </a>
 
-          <a href="contact.html" class="command-btn">
-            Get started
+        <!-- Phone icon -->
+        <a
+          href="tel:6822153934"
+          class="nav-mini-icon"
+          aria-label="Call"
+        >
+          <i class="fa-solid fa-phone"></i>
+        </a>
+
+        <!-- CTA -->
+        <a
+          href="contact.html"
+          class="flex items-center gap-2 px-5 py-2 rounded-full
+                 border border-white/20 text-xs tracking-[0.25em] uppercase
+                 hover:bg-white/10 transition"
+        >
+          Start Project
+          <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Mobile: right spacer (keeps center logo truly centered) -->
+      <div class="md:hidden mobile-right-spacer" aria-hidden="true"></div>
+    </nav>
+
+    <!-- MOBILE MENU PANEL -->
+    <div id="mobileMenu" class="mobile-menu md:hidden" aria-hidden="true">
+      <!-- CLOSE BUTTON -->
+      <button class="mobile-close" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="mobile-menu-backdrop"></div>
+
+      <div class="mobile-menu-inner">
+        <a href="#portfolio" class="nav-link">Work</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- Mobile contact icons -->
+        <div class="mt-8 flex justify-center gap-6">
+          <a href="mailto:eliseowebdev@gmail.com"
+             class="mobile-contact-icon"
+             aria-label="Email">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+
+          <a href="tel:6822153934"
+             class="mobile-contact-icon"
+             aria-label="Call">
+            <i class="fa-solid fa-phone"></i>
           </a>
         </div>
+
+        <a href="contact.html" class="mobile-cta">
+          Start Project <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
+        </a>
       </div>
-
-      <!-- soft fade edges (makes it feel premium) -->
-      <div class="command-edge" aria-hidden="true"></div>
     </div>
-  </div>
-</section>
+  </header>
 
+  <!-- MAIN -->
+  <main class="relative z-10">
 
+    <!-- HERO -->
+    <section class="min-h-[88vh] flex items-center">
+      <div class="max-w-7xl mx-auto px-6 w-full">
+        <div class="flex justify-center">
+          <div class="max-w-3xl text-center">
 
+            <div class="fade delay-1 inline-flex items-center justify-center gap-3 px-4 py-2 mx-auto">
+              <span class="text-xs tracking-[0.3em] uppercase text-white/70">
+                Private Web Development
+              </span>
+            </div>
 
+            <h1 class="fade delay-2 mt-6 text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-semibold">
+              <span class="hero-orbitron">Custom Coded Websites</span> crafted at a higher
+              <br class="hidden sm:block" />
+              <span class="text-accent">level</span>.
+            </h1>
 
+            <p class="fade delay-3 mt-6 mx-auto max-w-xl text-white/65 text-lg leading-relaxed">
+              We design and build cinematic, conversion-focused websites for brands
+              that care about detail, performance, and perception.
+            </p>
 
+            <div class="fade delay-4 mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="contact.html" class="btn-primary">
+                Book a Call
+                <i class="fa-solid fa-arrow-right-long text-[12px]"></i>
+              </a>
 
-<section id="portfolio" class="portfolio-section bg-black relative z-10">
-  <div class="container">
+              <a href="#portfolio" class="btn-ghost">
+                View Work
+                <i class="fa-regular fa-circle-play"></i>
+              </a>
+            </div>
 
-    <!-- HEADER -->
-    <div class="portfolio-head">
-      <p class="kicker">Portfolio</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <p class="sub">
-        A focused selection of Custom Coded Websites. 
-      </p>
+    <!-- TICKER -->
+    <section class="ticker-wrap"> 
+      <div class="ticker-shell">
+        <p class="ticker-title">Services and tools </p>
+
+        <div class="ticker">
+          <div class="ticker-track">
+            <!-- SET 1 -->
+            <span class="pill">Custom Coded Websites</span>
+            <span class="pill">Custom Visual Design</span>
+            <span class="pill">Graphic Design and Branding</span>
+            <span class="pill">SEO Foundations</span>
+            <span class="pill">Monthly Maintenance</span>
+            <span class="pill">Domain and DNS Management</span>
+            <span class="pill">Custom Hosting Setup</span>
+            <span class="pill">Form Management</span>
+
+            <span class="stack">Tailwind CSS</span>
+            <span class="stack">React</span>
+            <span class="stack">GitHub Version Control</span>
+            <span class="stack">Performance Optimization</span>
+
+            <!-- SET 2 -->
+            <span class="pill">Custom Coded Websites</span>
+            <span class="pill">Custom Visual Design</span>
+            <span class="pill">Graphic Design and Branding</span>
+            <span class="pill">SEO Foundations</span>
+            <span class="pill">Monthly Maintenance</span>
+            <span class="pill">Domain and DNS Management</span>
+            <span class="pill">Custom Hosting Setup</span>
+            <span class="pill">Form Management</span>
+
+            <span class="stack">Tailwind CSS</span>
+            <span class="stack">React</span>
+            <span class="stack">GitHub Version Control</span>
+            <span class="stack">Performance Optimization</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="platform-section relative z-10 py-24 sm:py-32 bg-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="fade delay-1 text-xs tracking-[0.35em] uppercase text-white/60">
+          The Echelon Platform
+        </p>
+
+        <h2 class="fade delay-2 mt-5 text-[42px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-semibold">
+          Whatever you envision,<br class="hidden sm:block" />
+          we bring it to life faster.
+        </h2>
+
+        <p class="fade delay-3 mt-6 max-w-3xl text-white/60 text-lg leading-relaxed">
+          From founders to established teams, we build premium web experiences with
+          clean design, confident storytelling, and performance that feels effortless.
+        </p>
+
+        <div class="fade delay-4 mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-regular fa-window-maximize"></i>
+            </div>
+            <h3 class="feature-title">Custom builds</h3>
+            <p class="feature-text">
+              Tailored layouts and components designed around your brand, not a template.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-regular fa-circle-check"></i>
+            </div>
+            <h3 class="feature-title">Review and polish</h3>
+            <p class="feature-text">
+              A clean feedback flow with revisions that refine the details and elevate the finish.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3 class="feature-title">Speed and performance</h3>
+            <p class="feature-text">
+              Fast loading pages, smooth motion, and strong foundations for search visibility.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-regular fa-paper-plane"></i>
+            </div>
+            <h3 class="feature-title">Launch ready delivery</h3>
+            <p class="feature-text">
+              Clean handoff, hosting guidance, and support so your site goes live with confidence.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="relative z-10 py-24 sm:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Centered header -->
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-xs tracking-[0.35em] uppercase text-white/60">
+            Process
+          </p>
+
+          <h2 class="mt-5 text-[40px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-semibold">
+            A clean process that<br class="hidden sm:block" />
+            moves fast and is custom to you.
+          </h2>
+
+          <p class="mt-6 text-white/60 text-lg leading-relaxed"></p>
+        </div>
+
+        <!-- Square card -->
+        <div class="mt-14 flex justify-center">
+          <div class="process-square">
+            <!-- Step -->
+            <div class="process-step">
+              <div class="process-num">01</div>
+              <div class="process-body">
+                <h3 class="process-title">Discovery</h3>
+                <p class="process-text">
+                  We lock in goals, pages, vibe, and what “success” looks like.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-divider"></div>
+
+            <div class="process-step">
+              <div class="process-num">02</div>
+              <div class="process-body">
+                <h3 class="process-title">Design Direction</h3>
+                <p class="process-text">
+                  Layout, typography, and visuals — we build a look that fits your level.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-divider"></div>
+
+            <div class="process-step">
+              <div class="process-num">03</div>
+              <div class="process-body">
+                <h3 class="process-title">Build</h3>
+                <p class="process-text">
+                  Custom-coded sections, smooth motion, responsive polish, and performance.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-divider"></div>
+
+            <div class="process-step">
+              <div class="process-num">04</div>
+              <div class="process-body">
+                <h3 class="process-title">Launch + Support</h3>
+                <p class="process-text">
+                  DNS + hosting setup, form testing, and clean handoff with optional maintenance.
+                </p>
+              </div>
+            </div>
+
+            <!-- CTA row -->
+            <div class="process-cta">
+              <a href="contact.html" class="process-btn">
+                Start a project <i class="fa-solid fa-arrow-right-long text-[12px]"></i>
+              </a>
+              <span class="process-note">Typical timeline: 7–21 days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECRET RPG DIALOG (hidden until triggered) -->
+    <div id="rpgEgg" class="rpg-egg" aria-hidden="true">
+      <div class="rpg-backdrop"></div>
+
+      <div class="rpg-box" role="dialog" aria-label="Secret message">
+        <div class="rpg-top">
+          <div class="rpg-title">Echelon Secret</div>
+          <button id="rpgClose" class="rpg-close" aria-label="Close">×</button>
+        </div>
+
+        <div id="rpgText" class="rpg-text"></div>
+
+        <div class="rpg-bottom">
+          <div class="rpg-hint">
+            Press <span class="rpg-key">E</span> or tap <span class="rpg-key">Next</span>
+          </div>
+
+          <button id="rpgNext" class="rpg-next" type="button">
+            Next <span class="rpg-arrow">▶</span>
+          </button>
+
+          <span class="rpg-caret" aria-hidden="true">▮</span>
+        </div>
+      </div>
     </div>
 
-    <!-- WORK LIST -->
-    <div class="work-list">
+    <!-- COMMAND / COLLAGE SECTION -->
+    <section id="command" class="command-section relative z-10 py-24 sm:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="command-stage">
+          <!-- collage layer -->
+          <div class="command-collage" aria-hidden="true">
+            <img class="c-img c-1" src="assets/chill.png" alt="" />
+            <img class="c-img c-2" src="assets/SpecialtyCars.png" alt="" />
+            <img class="c-img c-3" src="assets/max.png" alt="" />
+            <img class="c-img c-4" src="assets/Elixir.png" alt="" />
+            <img class="c-img c-5" src="assets/anchor.png" alt="" />
+          </div>
 
-      <a class="work-item work-reveal-lr" href="https://maximumautocaretx.com/">
-        <h3 class="work-heading">Maximumautocaretx.com</h3>
-        <div class="work-media">
-          <img src="assets/max.png" alt="CHILL Grapevine website" />
-          <div class="work-scrim"></div>
-        </div>
-      </a>
+          <!-- centered "command bar" -->
+          <div class="command-card">
+            <div class="command-inner">
+              <h3 class="command-text">
+                From Entrepenuers to Enterprises<span class="command-caret">|</span>
+              </h3>
 
-      <a class="work-item work-reveal-lr" href="https://anchorofhopecounselingllc.com/">
-        <h3 class="work-heading">AnchorOfHopeCounseling.com</h3>
-        <div class="work-media">
-          <img src="assets/anchor.png" alt="Anchor of Hope Counseling website" />
-          <div class="work-scrim"></div>
-        </div>
-      </a>
+              <a href="contact.html" class="command-btn">
+                Get started
+              </a>
+            </div>
+          </div>
 
-      <a class="work-item work-reveal-lr" href="https://elixiruptowndallas.com/">
-        <h3 class="work-heading">ElixirUptownDallas.com</h3>
-        <div class="work-media">
-          <img src="assets/Elixir.png" alt="Elixir Uptown website" />
-          <div class="work-scrim"></div>
+          <!-- soft fade edges (makes it feel premium) -->
+          <div class="command-edge" aria-hidden="true"></div>
         </div>
-      </a>
+      </div>
+    </section>
 
-      <a class="work-item work-reveal-lr" href="https://www.specialtycarsofflorida.com/">
-        <h3 class="work-heading">SpecialtyCarsOfFlorida.com</h3>
-        <div class="work-media">
-          <img src="assets/SpecialtyCars.png" alt="Shane’s Garages website" />
-          <div class="work-scrim"></div>
-        </div>
-      </a>
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio-section bg-black relative z-10">
+      <div class="container">
 
-         <a class="work-item work-reveal-lr" href="https://mitnl.netlify.app/">
-        <h3 class="work-heading">Maybeinthenextlife.com</h3>
-        <div class="work-media">
-          <img src="assets/mitnl.png" alt="Shane’s Garages website" />
-          <div class="work-scrim"></div>
+        <!-- HEADER -->
+        <div class="portfolio-head">
+          <p class="kicker">Portfolio</p>
+
+          <p class="sub">
+            A focused selection of Custom Coded Websites. 
+          </p>
         </div>
-      </a>
+
+        <!-- WORK LIST -->
+        <div class="work-list">
+
+          <a class="work-item work-reveal-lr" href="https://maximumautocaretx.com/">
+            <h3 class="work-heading">Maximumautocaretx.com</h3>
+            <div class="work-media">
+              <img src="assets/max.png" alt="CHILL Grapevine website" />
+              <div class="work-scrim"></div>
+            </div>
+          </a>
+
+          <a class="work-item work-reveal-lr" href="https://anchorofhopecounselingllc.com/">
+            <h3 class="work-heading">AnchorOfHopeCounseling.com</h3>
+            <div class="work-media">
+              <img src="assets/anchor.png" alt="Anchor of Hope Counseling website" />
+              <div class="work-scrim"></div>
+            </div>
+          </a>
+
+          <a class="work-item work-reveal-lr" href="https://elixiruptowndallas.com/">
+            <h3 class="work-heading">ElixirUptownDallas.com</h3>
+            <div class="work-media">
+              <img src="assets/Elixir.png" alt="Elixir Uptown website" />
+              <div class="work-scrim"></div>
+            </div>
+          </a>
+
+          <a class="work-item work-reveal-lr" href="https://www.specialtycarsofflorida.com/">
+            <h3 class="work-heading">SpecialtyCarsOfFlorida.com</h3>
+            <div class="work-media">
+              <img src="assets/SpecialtyCars.png" alt="Shane’s Garages website" />
+              <div class="work-scrim"></div>
+            </div>
+          </a>
+
+          <a class="work-item work-reveal-lr" href="https://mitnl.netlify.app/">
+            <h3 class="work-heading">Maybeinthenextlife.com</h3>
+            <div class="work-media">
+              <img src="assets/mitnl.png" alt="Shane’s Garages website" />
+              <div class="work-scrim"></div>
+            </div>
+          </a>
 
           <a class="work-item work-reveal-lr" href="https://chillgrapevine.netlify.app/">
-        <h3 class="work-heading">ChillBardDFW.com</h3>
-        <div class="work-media">
-          <img src="assets/chill.png" alt="Shane’s Garages website" />
-          <div class="work-scrim"></div>
+            <h3 class="work-heading">ChillBardDFW.com</h3>
+            <div class="work-media">
+              <img src="assets/chill.png" alt="Shane’s Garages website" />
+              <div class="work-scrim"></div>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
 
-  </div>
-<style>
-  /* SECTION */
-  .portfolio-section{
-    padding: clamp(2.25rem, 4vw, 3.5rem) 0;
-    position: relative;
-  }
-
-  .container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 clamp(16px, 4vw, 24px); /* mobile-safe */
-  }
-
-  /* HEADER */
-  .portfolio-head{
-    max-width: 720px;
-    margin: 0 auto clamp(2.5rem, 5vw, 4.5rem);
-    text-align: center;
-  }
-
-  .kicker{
-    font-size: 12px;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    margin: 0;
-  }
-
-  .title{
-    margin: 16px 0 0;
-    font-size: clamp(30px, 5vw, 48px);
-    line-height: 1.1;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.801);
-    word-break: break-word;
-  }
-
-  .sub{
-    margin-top: 14px;
-    font-size: clamp(15px, 1.8vw, 17px);
-    line-height: 1.7;
-    color: rgba(255,255,255,0.6);
-  }
-
-  /* WORK LIST */
-  .work-list{
-    display: flex;
-    flex-direction: column;
-    gap: clamp(2.75rem, 6vw, 6rem); /* responsive spacing */
-  }
-
-  .work-item{
-    display: block;
-    max-width: 980px;
-    margin: 0 auto;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-
-  /* UNIFORM TITLE SIZE (fluid on mobile) */
-  .work-heading{
-    margin: 0 0 16px;
-    font-size: clamp(20px, 4.2vw, 34px);
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    color: rgba(255,255,255,0.95);
-    line-height: 1.15;
-    overflow-wrap: anywhere; /* prevents long domain overflow */
-  }
-
-  /* IMAGE */
-  .work-media{
-    position: relative;
-    height: clamp(220px, 52vw, 420px); /* responsive height */
-    border-radius: clamp(14px, 3vw, 20px);
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(255,255,255,0.02);
-  }
-
-  .work-media img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.92;
-    transform: scale(1.02);
-    transition: transform 700ms ease, opacity 400ms ease;
-    display: block;
-  }
-
-  .work-item:hover img{
-    transform: scale(1.01);
-    opacity: 1;
-  }
-
-  .work-scrim{
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to top,
-      rgba(0,0,0,0.6),
-      rgba(0,0,0,0.12)
-    );
-    pointer-events: none;
-  }
-
-  /* LEFT → RIGHT REVEAL */
-  .work-reveal-lr{
-    opacity: 0;
-    transform: translateX(-24px);
-    will-change: transform, opacity;
-  }
-
-  .work-reveal-lr.in{
-    opacity: 1;
-    transform: translateX(0);
-    transition: 700ms cubic-bezier(.2,.7,.2,1);
-  }
-
-  /* stagger (keep, but apply to all items) */
-  .work-reveal-lr.in:nth-of-type(1){ transition-delay: 0ms; }
-  .work-reveal-lr.in:nth-of-type(2){ transition-delay: 120ms; }
-  .work-reveal-lr.in:nth-of-type(3){ transition-delay: 240ms; }
-  .work-reveal-lr.in:nth-of-type(4){ transition-delay: 360ms; }
-  .work-reveal-lr.in:nth-of-type(5){ transition-delay: 480ms; }
-  .work-reveal-lr.in:nth-of-type(6){ transition-delay: 600ms; }
-
-  /* MOBILE TWEAKS */
-  @media (max-width: 768px){
-    .portfolio-head{ margin-bottom: 2.75rem; }
-    .work-heading{ margin-bottom: 14px; }
-  }
-
-  /* Reduce motion accessibility */
-  @media (prefers-reduced-motion: reduce){
-    .work-reveal-lr,
-    .work-reveal-lr.in{
-      opacity: 1 !important;
-      transform: none !important;
-      transition: none !important;
-    }
-    .work-media img{
-      transition: none !important;
-      transform: none !important;
-    }
-  }
-</style>
-
-
-</section>
-
-<div id="zombies-egg" class="zombies-overlay">
-  <video
-    id="zombies-video"
-    muted
-    playsinline
-    preload="auto"
-    webkit-playsinline
-  >
-    <source src="/assets/115.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<!-- REVIEWS -->
-<section id="reviews" class="relative z-10 bg-black py-24 sm:py-32 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <!-- Header -->
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="text-xs tracking-[0.35em] uppercase text-white/60">
-        Reviews
-      </p>
-      <h2 class="mt-5 text-[40px] sm:text-[56px] leading-[1.05] font-semibold">
-        Trusted by real businesses.
-      </h2>
-     
-    </div>
-
-    <!-- Review cards -->
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-      <!-- Review -->
-      <div class="review-card">
-        <p class="review-text">
-          Eliseo built our website and we couldn’t be happier with how it turned out.
-          The site looks clean, loads fast, and actually feels like it represents our business.
-          He was super easy to work with and genuinely cares about quality.
-        </p>
-
-        <div class="review-footer">
-          <div>
-            <p class="review-name">Marshall</p>
-            <p class="review-meta">Houston Coating Co.</p>
-          </div>
-          <div class="review-stars">
-            ★★★★★
-          </div>
-        </div>
       </div>
 
-      <!-- Review -->
-      <div class="review-card">
-        <p class="review-text">
-          Eliseo helped me develop my website for my counseling practice when I first opened.
-          I was nervous because my site was the face of my business, but he took the time
-          to understand what I wanted and made my vision come to life.
-        </p>
+      <style>
+        /* SECTION */
+        .portfolio-section{
+          padding: clamp(2.25rem, 4vw, 3.5rem) 0;
+          position: relative;
+        }
 
-        <div class="review-footer">
-          <div>
-            <p class="review-name">Jason Lugo</p>
-            <p class="review-meta">Anchor Of Hope Counseling</p>
-          </div>
-          <div class="review-stars">
-            ★★★★★
-          </div>
+        .container{
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 clamp(16px, 4vw, 24px);
+        }
+
+        /* HEADER */
+        .portfolio-head{
+          max-width: 720px;
+          margin: 0 auto clamp(2.5rem, 5vw, 4.5rem);
+          text-align: center;
+        }
+
+        .kicker{
+          font-size: 12px;
+          letter-spacing: 0.35em;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.6);
+          margin: 0;
+        }
+
+        .title{
+          margin: 16px 0 0;
+          font-size: clamp(30px, 5vw, 48px);
+          line-height: 1.1;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.801);
+          word-break: break-word;
+        }
+
+        .sub{
+          margin-top: 14px;
+          font-size: clamp(15px, 1.8vw, 17px);
+          line-height: 1.7;
+          color: rgba(255,255,255,0.6);
+        }
+
+        /* WORK LIST */
+        .work-list{
+          display: flex;
+          flex-direction: column;
+          gap: clamp(2.75rem, 6vw, 6rem);
+        }
+
+        .work-item{
+          display: block;
+          max-width: 980px;
+          margin: 0 auto;
+          text-decoration: none;
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+        }
+
+        .work-heading{
+          margin: 0 0 16px;
+          font-size: clamp(20px, 4.2vw, 34px);
+          font-weight: 600;
+          letter-spacing: -0.01em;
+          color: rgba(255,255,255,0.95);
+          line-height: 1.15;
+          overflow-wrap: anywhere;
+        }
+
+        .work-media{
+          position: relative;
+          height: clamp(220px, 52vw, 420px);
+          border-radius: clamp(14px, 3vw, 20px);
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.08);
+          background: rgba(255,255,255,0.02);
+        }
+
+        .work-media img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.92;
+          transform: scale(1.02);
+          transition: transform 700ms ease, opacity 400ms ease;
+          display: block;
+        }
+
+        .work-item:hover img{
+          transform: scale(1.01);
+          opacity: 1;
+        }
+
+        .work-scrim{
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.12)
+          );
+          pointer-events: none;
+        }
+
+        .work-reveal-lr{
+          opacity: 0;
+          transform: translateX(-24px);
+          will-change: transform, opacity;
+        }
+
+        .work-reveal-lr.in{
+          opacity: 1;
+          transform: translateX(0);
+          transition: 700ms cubic-bezier(.2,.7,.2,1);
+        }
+
+
+        @media (max-width: 768px){
+          .portfolio-head{ margin-bottom: 2.75rem; }
+          .work-heading{ margin-bottom: 14px; }
+        }
+
+        @media (prefers-reduced-motion: reduce){
+          .work-reveal-lr,
+          .work-reveal-lr.in{
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+          }
+          .work-media img{
+            transition: none !important;
+            transform: none !important;
+          }
+        }
+      </style>
+    </section>
+
+    <!-- ZOMBIES EGG OVERLAY -->
+    <div id="zombies-egg" class="zombies-overlay">
+      <video
+        id="zombies-video"
+        muted
+        playsinline
+        preload="auto"
+        webkit-playsinline
+      >
+        <source src="/assets/115.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="relative z-10 bg-black py-24 sm:py-32 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-xs tracking-[0.35em] uppercase text-white/60">
+            Reviews
+          </p>
+          <h2 class="mt-5 text-[40px] sm:text-[56px] leading-[1.05] font-semibold">
+            Trusted by real businesses.
+          </h2>
         </div>
-      </div>
 
-      <!-- Review -->
-      <div class="review-card">
-        <p class="review-text">
-          Eliseo provides a great service and has real passion for what he does.
-          Would absolutely recommend if you need a quality website built.
-        </p>
+        <!-- Review cards -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="review-card">
+            <p class="review-text">
+              Eliseo built our website and we couldn’t be happier with how it turned out.
+              The site looks clean, loads fast, and actually feels like it represents our business.
+              He was super easy to work with and genuinely cares about quality.
+            </p>
+            <div class="review-footer">
+              <div>
+                <p class="review-name">Marshall</p>
+                <p class="review-meta">Houston Coating Co.</p>
+              </div>
+              <div class="review-stars">
+                ★★★★★
+              </div>
+            </div>
+          </div>
 
-        <div class="review-footer">
-          <div>
-            <p class="review-name">Max Krueger</p>
-            <p class="review-meta">Maximum Autocare Tx</p>
+          <div class="review-card">
+            <p class="review-text">
+              Eliseo helped me develop my website for my counseling practice when I first opened.
+              I was nervous because my site was the face of my business, but he took the time
+              to understand what I wanted and made my vision come to life.
+            </p>
+            <div class="review-footer">
+              <div>
+                <p class="review-name">Jason Lugo</p>
+                <p class="review-meta">Anchor Of Hope Counseling</p>
+              </div>
+              <div class="review-stars">
+                ★★★★★
+              </div>
+            </div>
           </div>
-          <div class="review-stars">
-            ★★★★★
+
+          <div class="review-card">
+            <p class="review-text">
+              Eliseo provides a great service and has real passion for what he does.
+              Would absolutely recommend if you need a quality website built.
+            </p>
+            <div class="review-footer">
+              <div>
+                <p class="review-name">Max Krueger</p>
+                <p class="review-meta">Maximum Autocare Tx</p>
+              </div>
+              <div class="review-stars">
+                ★★★★★
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
-<!-- FOOTER -->
-<footer class="glass-footer">
-  <div class="footer-shell">
+    <!-- FOOTER -->
+    <footer class="glass-footer">
+      <div class="footer-shell">
 
-    <!-- LOGO COLUMN -->
-    <div class="footer-brand">
-<img
-  src="assets/logo.png"
-  alt="Echelon Websites"
-  id="footer-logo"
-  class="footer-logo-easter"
-/>
-    </div>
+        <!-- LOGO COLUMN -->
+        <div class="footer-brand">
+          <img
+            src="assets/logo.png"
+            alt="Echelon Websites"
+            id="footer-logo"
+            class="footer-logo-easter"
+          />
+        </div>
 
-    <!-- LINKS -->
-    <div class="footer-grid">
+        <!-- LINKS -->
+        <div class="footer-grid">
 
-      <div class="footer-col">
-        <h4>Echelon</h4>
-        <a href="#portfolio">Work</a>
-        <a href="#process">Process</a>
-        <a href="#reviews">Reviews</a>
-        <a href="contact.html">Contact</a>
+          <div class="footer-col">
+            <h4>Echelon</h4>
+            <a href="#portfolio">Work</a>
+            <a href="#process">Process</a>
+            <a href="#reviews">Reviews</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="#">Custom Websites</a>
+            <a href="#">Visual Design</a>
+            <a href="#">SEO Foundations</a>
+            <a href="#">Maintenance</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="tel:6822153934">682 · 215 · 3934</a>
+            <a href="mailto:eliseowebdev@gmail.com">eliseowebdev@gmail.com</a>
+            <span class="footer-muted">Dallas–Fort Worth</span>
+          </div>
+
+        </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="#">Custom Websites</a>
-        <a href="#">Visual Design</a>
-        <a href="#">SEO Foundations</a>
-        <a href="#">Maintenance</a>
+      <!-- BOTTOM BAR -->
+      <div class="footer-bottom-simple">
+        <span class="footer-copy">
+          © <span id="year"></span> Echelon — All rights reserved
+        </span>
+
+        <span class="egg-inline">
+          <span id="eggQ" class="egg-q" aria-hidden="true">?</span>
+
+          <button id="eggBtn" class="egg-btn" type="button" aria-label="Easter egg">
+            <img src="assets/egg.png" alt="" class="egg-img" />
+          </button>
+        </span>
+
+        <span id="eggRiddle" class="egg-riddle" aria-hidden="true">
+          Echelon starts with me. I get brighter every time you say hello.
+          I only speak after the fifth press…. And I live within the footer..
+        </span>
       </div>
 
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="tel:6822153934">682 · 215 · 3934</a>
-        <a href="mailto:eliseowebdev@gmail.com">eliseowebdev@gmail.com</a>
-        <span class="footer-muted">Dallas–Fort Worth</span>
-      </div>
+      <style>
+        .footer-bottom-simple{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          gap:10px;
+          flex-wrap:wrap;
+          padding:16px 14px;
+          border-top:1px solid rgba(255,255,255,0.10);
+        }
+        .footer-copy{
+          font-size:12px;
+          opacity:0.65;
+          letter-spacing:0.10em;
+        }
 
-    </div>
-  </div>
+        .egg-inline{
+          position:relative;
+          display:inline-flex;
+          align-items:center;
+        }
+        .egg-btn{
+          background:transparent;
+          border:none;
+          padding:2px;
+          cursor:pointer;
+          line-height:0;
+        }
+        .egg-img{
+          width:16px;
+          height:16px;
+          display:block;
+          opacity:0.8;
+          transition:transform 160ms ease, opacity 160ms ease;
+        }
+        .egg-btn:hover .egg-img{
+          opacity:1;
+          transform:translateY(-1px);
+        }
 
-  <!-- BOTTOM BAR -->
-<!-- FOOTER BOTTOM (simple) -->
-<div class="footer-bottom-simple">
-  <span class="footer-copy">
-    © <span id="year"></span> Echelon — All rights reserved
-  </span>
+        .egg-q{
+          position:absolute;
+          left:50%;
+          top:-14px;
+          transform:translateX(-50%) translateY(6px);
+          opacity:0;
+          font-weight:800;
+          font-size:13px;
+          transition:opacity 180ms ease, transform 180ms ease;
+          pointer-events:none;
+          text-shadow:0 0 10px rgba(255,255,255,0.25);
+        }
+        .egg-q.show{
+          opacity:0.9;
+          transform:translateX(-50%) translateY(0px);
+        }
 
-  <span class="egg-inline">
-    <!-- ? above the image -->
-    <span id="eggQ" class="egg-q" aria-hidden="true">?</span>
+        .egg-riddle{
+          display:none;
+          font-size:12px;
+          opacity:0.6;
+          letter-spacing:0.08em;
+          max-width:560px;
+          text-align:center;
+        }
+        .egg-riddle.show{ display:inline; }
 
-    <!-- small image button -->
-    <button id="eggBtn" class="egg-btn" type="button" aria-label="Easter egg">
-      <img src="assets/egg.png" alt="" class="egg-img" />
-    </button>
-  </span>
+        @media (max-width:520px){
+          .egg-riddle.show{ display:block; margin-top:8px; }
+        }
 
-  <!-- riddle text (appears after 2nd press) -->
-  <span id="eggRiddle" class="egg-riddle" aria-hidden="true">
-    Echelon starts with me. I get brighter every time you say hello.
-    I only speak after the fifth press…. And I live within the footer..
-  </span>
-</div>
+        /* clickable egg image */
+        .echelon-egg{
+          width: 52px;
+          height: 52px;
+          object-fit: contain;
+          opacity: 0.5;
+          transition:
+            opacity .3s ease,
+            transform .2s ease,
+            filter .3s ease;
+        }
 
-<style>
-  .footer-bottom-simple{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
-    padding:16px 14px;
-    border-top:1px solid rgba(255,255,255,0.10);
-  }
-  .footer-copy{
-    font-size:12px;
-    opacity:0.65;
-    letter-spacing:0.10em;
-  }
+        #echelon-trigger:hover .echelon-egg{
+          opacity: 0.85;
+          filter: drop-shadow(0 0 14px rgba(120,90,255,0.65));
+          transform: scale(1.5);
+        }
 
-  .egg-inline{
-    position:relative;
-    display:inline-flex;
-    align-items:center;
-  }
-  .egg-btn{
-    background:transparent;
-    border:none;
-    padding:2px;
-    cursor:pointer;
-    line-height:0;
-  }
-  .egg-img{
-    width:16px;
-    height:16px;
-    display:block;
-    opacity:0.8;
-    transition:transform 160ms ease, opacity 160ms ease;
-  }
-  .egg-btn:hover .egg-img{
-    opacity:1;
-    transform:translateY(-1px);
-  }
+        .echelon-secret{
+          margin-top: 18px;
+          max-width: 520px;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 12px;
+          line-height: 1.7;
+          letter-spacing: 0.02em;
+          text-transform: none;
+          color: rgba(255,255,255,0.7);
+          animation: fadeInSoft 0.8s ease forwards;
+        }
 
-  .egg-q{
-    position:absolute;
-    left:50%;
-    top:-14px;
-    transform:translateX(-50%) translateY(6px);
-    opacity:0;
-    font-weight:800;
-    font-size:13px;
-    transition:opacity 180ms ease, transform 180ms ease;
-    pointer-events:none;
-    text-shadow:0 0 10px rgba(255,255,255,0.25);
-  }
-  .egg-q.show{
-    opacity:0.9;
-    transform:translateX(-50%) translateY(0px);
-  }
+        @keyframes fadeInSoft{
+          from{
+            opacity: 0;
+            transform: translateY(6px);
+          }
+          to{
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+    </footer>
 
-  .egg-riddle{
-    display:none;
-    font-size:12px;
-    opacity:0.6;
-    letter-spacing:0.08em;
-    max-width:560px;
-    text-align:center;
-  }
-  .egg-riddle.show{ display:inline; }
-
-  @media (max-width:520px){
-    .egg-riddle.show{ display:block; margin-top:8px; }
-  }/* =========================
-   FOOTER EASTER EGG
-========================= */
-
-/* clickable egg image */
-.echelon-egg{
-  width: 52px;              /* BIGGER */
-  height: 52px;
-  object-fit: contain;
-  opacity: 0.5;
-  transition:
-    opacity .3s ease,
-    transform .2s ease,
-    filter .3s ease;
-}
-
-/* hover hint */
-#echelon-trigger:hover .echelon-egg{
-  opacity: 0.85;
-  filter: drop-shadow(0 0 14px rgba(120,90,255,0.65));
-  transform: scale(1.5);
-}
-
-/* hidden message */
-.echelon-secret{
-  margin-top: 18px;
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 12px;
-  line-height: 1.7;
-  letter-spacing: 0.02em;   /* subtle, readable */
-  text-transform: none;    /* NOT ALL CAPS */
-  color: rgba(255,255,255,0.7);
-  animation: fadeInSoft 0.8s ease forwards;
-}
-
-/* fade-in animation */
-@keyframes fadeInSoft{
-  from{
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-</style>
-
-<script>
-(() => {
-  // Year
-  const y = document.getElementById("year");
-  if (y) y.textContent = new Date().getFullYear();
-
-  // Egg logic
-  const btn = document.getElementById("eggBtn");
-  const q = document.getElementById("eggQ");
-  const r = document.getElementById("eggRiddle");
-  if (!btn || !q || !r) return;
-
-  let presses = 0;
-
-  btn.addEventListener("click", () => {
-    presses++;
-
-    if (presses === 1) {
-      q.classList.add("show");
-      q.setAttribute("aria-hidden","false");
-      r.classList.remove("show");
-      r.setAttribute("aria-hidden","true");
-      return;
-    }
-
-    if (presses === 2) {
-      q.classList.remove("show");
-      q.setAttribute("aria-hidden","true");
-      r.classList.add("show");
-      r.setAttribute("aria-hidden","false");
-      return;
-    }
-
-    // third press resets (optional)
-    presses = 0;
-    q.classList.remove("show");
-    r.classList.remove("show");
-    q.setAttribute("aria-hidden","true");
-    r.setAttribute("aria-hidden","true");
-  });
-})();
-</script>
-
-
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   </main>
-<script>
-(() => {
-  // Change this selector if your footer logo isn't the first footer img
-  const footerLogo = document.querySelector("footer img");
-  const egg = document.getElementById("rpgEgg");
-  const textEl = document.getElementById("rpgText");
-  const nextBtn = document.getElementById("rpgNext");
-  const closeBtn = document.getElementById("rpgClose");
-
-  if (!footerLogo || !egg || !textEl || !nextBtn || !closeBtn) return;
-
-  const lines = [
-  "Wow… I can’t believe you found this.",
-  "This is a little Easter egg from the developers to you.",
-  "Thanks for visiting our website — seriously!",
-  "Nice mustache, by the way.",
-  "I don’t know if you actually have a mustache…",
-  "but I figured I’d guess. Felt right.",
-  "Make sure to be the light in this dark world.",
-  "And shout out trauma ray",
-  "Anyway — have a good day.",
-  "— Echelon Developers"
-  ];
-
-  let taps = 0;
-  let tapTimer = null;
-  let idx = 0;
-  let typingTimer = null;
-
-  const typeLine = (str) => {
-    clearInterval(typingTimer);
-    textEl.textContent = "";
-    let i = 0;
-    typingTimer = setInterval(() => {
-      textEl.textContent += str[i] || "";
-      i++;
-      if (i >= str.length) clearInterval(typingTimer);
-    }, 18);
-  };
-
-  const openEgg = () => {
-    egg.classList.add("show");
-    egg.setAttribute("aria-hidden", "false");
-    idx = 0;
-    typeLine(lines[idx]);
-  };
-
-  const closeEgg = () => {
-    egg.classList.remove("show");
-    egg.setAttribute("aria-hidden", "true");
-    clearInterval(typingTimer);
-  };
-
-  const next = () => {
-    idx++;
-    if (idx >= lines.length) {
-      closeEgg();
-      return;
-    }
-    typeLine(lines[idx]);
-  };
-
-  // Hard to find: click logo 6 times quickly (tweak to 5 if you want easier)
-  footerLogo.addEventListener("click", () => {
-    taps++;
-    clearTimeout(tapTimer);
-    tapTimer = setTimeout(() => (taps = 0), 1400);
-
-    if (taps === 5) {
-      openEgg();
-      taps = 0;
-    }
-  });
-
-  nextBtn.addEventListener("click", next);
-  closeBtn.addEventListener("click", closeEgg);
-
-  // Click backdrop closes
-  egg.querySelector(".rpg-backdrop").addEventListener("click", closeEgg);
-
-  // Keyboard: E = next, ESC = close
-  window.addEventListener("keydown", (e) => {
-    if (!egg.classList.contains("show")) return;
-
-    if (e.key.toLowerCase() === "e" || e.key === "Enter") next();
-    if (e.key === "Escape") closeEgg();
-  });
-})();
-</script>
-<script>
-  const logo = document.getElementById("footer-logo");
-  let pressCount = 0;
-
-  logo.addEventListener("click", () => {
-    pressCount++;
-
-    logo.classList.remove(
-      "glow-1","glow-2","glow-3","glow-4","glow-5"
-    );
-
-    const level = Math.min(pressCount, 5);
-    logo.classList.add(`glow-${level}`);
-
-    if (pressCount === 5) {
-      triggerEasterEgg();
-    }
-  });
-
-  function triggerEasterEgg() {
-    console.log("🎮 Easter egg unlocked");
-    // open modal
-    // show retro dialog
-    // play sound
-    // etc
-  }
-</script>
-<script>
-  let keyBuffer = "";
-
-  document.addEventListener("keydown", (e) => {
-    if (!/^[0-9]$/.test(e.key)) return;
-
-    keyBuffer += e.key;
-    keyBuffer = keyBuffer.slice(-3);
-
-    if (keyBuffer === "115") {
-      triggerZombiesEgg();
-      keyBuffer = "";
-    }
-  });
-
-  function triggerZombiesEgg() {
-    const overlay = document.getElementById("zombies-egg");
-    const video = document.getElementById("zombies-video");
-
-    // show overlay FIRST
-    overlay.classList.add("show");
-
-    // wait one frame so browser allows playback
-    requestAnimationFrame(() => {
-      video.currentTime = 0;
-      const playPromise = video.play();
-
-      // handle Safari/Chrome safely
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          console.warn("Autoplay blocked — but should still work on interaction.");
-        });
-      }
-    });
-
-    // hide after video length
-    setTimeout(() => {
-      overlay.classList.remove("show");
-      video.pause();
-    }, 2800);
-  }
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.querySelector(".mobile-menu-btn");
-  const menu = document.getElementById("mobileMenu");
-  const closeBtn = document.querySelector(".mobile-close");
-  const backdrop = document.querySelector(".mobile-menu-backdrop");
-
-  if (!btn || !menu) return;
-
-  const openMenu = () => {
-    menu.classList.add("open");
-    btn.classList.add("is-open");              // (optional) animate burger if you want
-    btn.setAttribute("aria-expanded", "true");
-    menu.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeMenu = () => {
-    menu.classList.remove("open");
-    btn.classList.remove("is-open");
-    btn.setAttribute("aria-expanded", "false");
-    menu.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  };
-
-  // ✅ Toggle (open/close)
-  btn.addEventListener("click", () => {
-    menu.classList.contains("open") ? closeMenu() : openMenu();
-  });
-
-  // ✅ Close button + backdrop
-  closeBtn?.addEventListener("click", closeMenu);
-  backdrop?.addEventListener("click", closeMenu);
-
-  // ✅ Close when any menu link is clicked
-  menu.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      closeMenu();
-    });
-  });
-
-  // ✅ ESC closes
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMenu();
-  });
-});
-</script>
-
 
   <!-- JS -->
   <script src="script.js"></script>

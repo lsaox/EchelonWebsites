@@ -1,4 +1,13 @@
+// ===== Scale section reveal + spotlight tracking =====
+(() => {
+  // reveal cards on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("in");
+    });
+  }, { threshold: 0.2 });
 
+  document.querySelectorAll(".reveal-card").forEach((el) => io.observe(el));
 
   // spotlight mouse follow per card
   document.querySelectorAll(".scale-card").forEach((card) => {
@@ -10,7 +19,7 @@
       card.style.setProperty("--my", `${y}%`);
     });
   });
-
+})();
 
 
   (() => {
@@ -175,3 +184,57 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// =========================
+// NAVBAR SHRINK ON SCROLL (DESKTOP)
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector(".nav-shell");
+  if (!nav) return;
+
+  let isShrunk = false;
+  const ENTER_OFFSET = 120; // scroll down past this to shrink
+  const EXIT_OFFSET  = 40;  // scroll back above this to un-shrink
+
+  const handleScroll = () => {
+    // only shrink on desktop
+    if (window.innerWidth < 768) {
+      if (isShrunk) {
+        nav.classList.remove("is-shrunk");
+        isShrunk = false;
+      }
+      return;
+    }
+
+    const y = window.scrollY || window.pageYOffset;
+
+    if (!isShrunk && y > ENTER_OFFSET) {
+      nav.classList.add("is-shrunk");
+      isShrunk = true;
+    } else if (isShrunk && y < EXIT_OFFSET) {
+      nav.classList.remove("is-shrunk");
+      isShrunk = false;
+    }
+  };
+
+  // initial state
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  window.addEventListener("resize", handleScroll);
+});
+// ===== Portfolio items: left → right reveal =====
+(() => {
+  const io = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          obs.unobserve(e.target); // reveal once
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  document.querySelectorAll(".work-reveal-lr").forEach((el) => io.observe(el));
+})();
